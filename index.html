@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Yelliz Yuthika | Clinical Psychology & Research Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/linkedin_avatar.jpg">
+
+  <!-- Google & Fontshare Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-editorial">
+  
+  <!-- Background Wallpaper Container with Slats / Venetian Blinds effect -->
+  <div class="desktop-wallpaper-container">
+    <div class="wallpaper-image-wrapper">
+      <img src="assets/hero_speaker.jpg" alt="Yelliz Yuthika on Stage" class="wallpaper-img" id="wallpaperImg">
+      <div class="wallpaper-slats-overlay"></div>
+      <div class="wallpaper-grain-overlay"></div>
+      <div class="wallpaper-vignette"></div>
+    </div>
+  </div>
+
+  <!-- Top macOS Menu Bar -->
+  <header class="macos-menubar" id="menuBar">
+    <div class="menubar-left">
+      <div class="apple-logo-item" title="Yuthika OS — Click to Reset Layout" onclick="resetDesktopLayout()">
+        <svg class="apple-icon" viewBox="0 0 170 170" width="15" height="15" fill="currentColor">
+          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.6-7.79-11.7-14.25-5.87-9.24-10.4-19.46-13.6-30.65-3.19-11.19-4.8-21.84-4.8-31.97 0-14.35 3.69-26.08 11.07-35.19 7.38-9.12 16.59-13.78 27.63-13.98 5.75 0 11.45 1.57 17.1 4.7 5.65 3.13 9.4 4.75 11.26 4.86 1.54 0 5.48-1.7 11.83-5.09 6.34-3.39 12.18-4.96 17.52-4.71 8.94.39 16.78 3.51 23.53 9.36 6.75 5.86 11.51 13.54 14.28 23.05-7.72 4.67-12.82 10.9-15.3 18.69-2.48 7.79-2.22 15.82.78 24.1 3 8.28 7.9 14.59 14.7 18.94 6.8 4.35 14.25 6.75 22.35 7.2-2.12 6.52-4.79 13.43-8 20.73zM119.22 33.54c0-7.1 2.5-13.88 7.5-20.34 5-6.46 11.39-10.87 19.16-13.2 1.09 7.82-.78 15.11-5.61 21.86-4.83 6.75-11.2 10.74-19.11 11.96-.32-.08-1.31-.2-1.94-.28z"/>
+        </svg>
+      </div>
+      <span class="menubar-title font-semibold">Yelliz Yuthika</span>
+      <div class="menubar-nav-items">
+        <button class="menu-item" onclick="openWindow('about')">About</button>
+        <button class="menu-item" onclick="openWindow('experience')">Experience</button>
+        <button class="menu-item" onclick="openWindow('education')">Education & Honors</button>
+        <button class="menu-item" onclick="openWindow('events')">Services & Events</button>
+        <button class="menu-item" onclick="openWindow('certifications')">Certifications & Awards</button>
+        <button class="menu-item" onclick="openWindow('skills')">Skills (15 Core)</button>
+        <button class="menu-item" onclick="openWindow('hobbies')">Hobbies & Passions</button>
+        <button class="menu-item" onclick="openWindow('leadership')">Rotary & Leadership</button>
+        <button class="menu-item" onclick="openWindow('contact')">Connect</button>
+      </div>
+    </div>
+
+    <div class="menubar-right">
+      <!-- Drag Instruction Pill -->
+      <div class="menubar-hint-pill" title="Drag any item or folder freely on screen">
+        <i data-lucide="move" class="bar-icon"></i>
+        <span>All Items Draggable</span>
+      </div>
+
+      <!-- Theme/Style Mode Selector -->
+      <div class="menubar-action-btn wallpaper-toggle-btn" id="themeToggleBtn" title="Switch Aesthetic Wallpaper" onclick="cycleWallpaperTheme()">
+        <i data-lucide="palette" class="bar-icon"></i>
+        <span class="bar-label-text" id="themeModeText">Editorial B&W</span>
+      </div>
+
+      <!-- Sound toggle -->
+      <div class="menubar-action-btn sound-toggle-btn" id="soundToggleBtn" title="Toggle System Audio FX" onclick="toggleSoundFX()">
+        <i data-lucide="volume-2" class="bar-icon" id="soundIcon"></i>
+      </div>
+
+      <!-- Quick Contact Pill -->
+      <a href="tel:+918667407733" class="menubar-pill-badge" title="Call Yuthika">
+        <i data-lucide="phone" class="pill-icon"></i>
+        <span class="pill-text">+91 8667407733</span>
+      </a>
+
+      <!-- Date & Clock -->
+      <div class="menubar-clock" id="systemClock">Mon 7:05 PM</div>
+    </div>
+  </header>
+
+  <!-- Desktop Main Screen Area -->
+  <main class="desktop-screen" id="desktopScreen">
+
+    <!-- Centerpiece Typography (Inspired by Anika Shah layout) -->
+    <div class="centerpiece-branding" id="centerpieceBranding">
+      <div class="centerpiece-cursive">Portfolio</div>
+      <div class="centerpiece-subrow">
+        <span class="author-name">YELLIZ YUTHIKA</span>
+        <span class="author-star">✦</span>
+        <span class="author-role">CLINICAL PSYCHOLOGY & RESEARCH</span>
+      </div>
+      <div class="centerpiece-tagline">SRM MEDICAL COLLEGE • HUMAN BEHAVIOUR & MENTAL HEALTH • ROTARY DISTRICT 2982</div>
+      
+      <!-- Inspirational Quote in Background -->
+      <div class="centerpiece-quote-pill">
+        <span class="quote-mark">“</span>Just because you're not perfect, doesn't mean you're not beautiful.<span class="quote-mark">”</span>
+      </div>
+    </div>
+
+    <!-- DRAGGABLE DESKTOP ITEMS LAYER (Fully Movable Anywhere) -->
+    <div class="desktop-items-layer" id="desktopItemsLayer">
+
+      <!-- Item 1: About Me (Pink folder + LinkedIn profile photo avatar) -->
+      <div class="movable-desktop-item node-top-left" id="item-about" data-target="about" style="top: 8%; left: 6%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art pink-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="user" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <div class="node-preview-card mini-polaroid">
+            <img src="assets/linkedin_avatar.jpg" alt="Yelliz Yuthika" class="preview-mini-img round-avatar">
+            <span class="node-badge-label">about me</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Experience & Roles (Amber folder) -->
+      <div class="movable-desktop-item node-top-center" id="item-experience" data-target="experience" style="top: 7%; left: 24%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art amber-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="briefcase" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <span class="node-label">experience (SRM & Rotaract)</span>
+        </div>
+      </div>
+
+      <!-- Item 3: Education & Academics (Blue folder) -->
+      <div class="movable-desktop-item node-top-center" id="item-education" data-target="education" style="top: 7%; left: 40%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art amber-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="graduation-cap" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <span class="node-label">education (SRM & Montfort)</span>
+        </div>
+      </div>
+
+      <!-- Item 3b: Skills & Endorsements (Violet folder) -->
+      <div class="movable-desktop-item node-top-center" id="item-skills" data-target="skills" style="top: 7%; left: 56%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art purple-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="check-check" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <span class="node-label">skills (15 core)</span>
+        </div>
+      </div>
+
+      <!-- Item 3c: Hobbies & Passions (Peach/Pink folder) -->
+      <div class="movable-desktop-item node-top-center" id="item-hobbies" data-target="hobbies" style="top: 7%; left: 72%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art peach-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="heart" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <span class="node-label">hobbies & passions</span>
+        </div>
+      </div>
+
+      <!-- Item 3: Services & Events / Fieldwork (Teal/Cyan folder) -->
+      <div class="movable-desktop-item node-mid-left" id="item-events" data-target="events" style="top: 48%; left: 5%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art teal-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="sparkles" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <div class="node-preview-card mini-polaroid">
+            <img src="assets/events/eeg_brain_scan.jpg" alt="Services & Events" class="preview-mini-img">
+            <span class="node-badge-label">services & events</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Licenses & Certifications (13 Certs) (Green folder) -->
+      <div class="movable-desktop-item node-bottom-left" id="item-certifications" data-target="certifications" style="bottom: 14%; left: 6%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art lime-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="shield-check" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <div class="node-preview-card mini-polaroid">
+            <span class="badge-count-pill">13 Certs</span>
+            <span class="node-badge-label">certifications</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Rotary & Leadership (Sky Blue folder + Stage photo) -->
+      <div class="movable-desktop-item node-mid-right" id="item-leadership" data-target="leadership" style="top: 48%; right: 6%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art blue-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="award" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <div class="node-preview-card mini-polaroid">
+            <img src="assets/rotary_banner.jpg" alt="District 2982" class="preview-mini-img wide-crop">
+            <span class="node-badge-label">rotary & ryla</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5: Gallery & Stage Moments (Peach folder) -->
+      <div class="movable-desktop-item node-bottom-right" id="item-gallery" data-target="gallery" style="bottom: 14%; right: 7%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art peach-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="camera" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <div class="node-preview-card mini-polaroid">
+            <img src="assets/hero_speaker.jpg" alt="Stage Moments" class="preview-mini-img">
+            <span class="node-badge-label">moments & stage</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6: Connect & Collabs (Purple folder) -->
+      <div class="movable-desktop-item node-top-right" id="item-contact" data-target="contact" style="top: 8%; right: 7%;">
+        <div class="item-inner-drag">
+          <div class="node-folder-art purple-folder">
+            <div class="folder-tab"></div>
+            <div class="folder-body">
+              <i data-lucide="send" class="folder-inner-icon"></i>
+            </div>
+          </div>
+          <span class="node-label">contact & links</span>
+        </div>
+      </div>
+
+      <!-- DRAGGABLE FROSTED GLASS WIDGET: CLINICAL PSYCHOLOGY & RESEARCH PROFILE -->
+      <div class="movable-desktop-item glass-speaker-widget" id="item-widget" style="top: 14%; right: 18%;">
+        <div class="item-inner-drag widget-card-container">
+          <div class="widget-drag-pill" title="Drag to move widget">
+            <i data-lucide="grip-horizontal" class="drag-grip-icon"></i>
+            <span class="pulsing-green-dot"></span>
+            <span class="live-text">OPEN TO COLLABORATION</span>
+          </div>
+
+          <div class="widget-photo-frame" onclick="openWindow('about')">
+            <img src="assets/linkedin_avatar.jpg" alt="Yelliz Yuthika" class="widget-portrait-img">
+            <div class="widget-hover-play">
+              <div class="play-btn-circle">
+                <i data-lucide="brain" class="play-icon-svg"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget-card-details">
+            <div class="widget-author-title">Yelliz Yuthika (She/Her)</div>
+            <div class="widget-author-role">BSc Clinical Psychology Undergraduate</div>
+            <div class="widget-meta-tags">
+              <span>✦ SRM Medical College</span>
+              <span>✦ Human Behaviour & Research</span>
+            </div>
+            <button class="btn btn-xs btn-primary widget-cta-btn" onclick="openWindow('certifications')">
+              <i data-lucide="award"></i> View 13 Certifications
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==========================================================================
+         MACOS WINDOW 1: ABOUT ME (Exact LinkedIn Profile & Bio)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowAbout" style="display: none; top: 10%; left: 18%; width: 750px; z-index: 100;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('about')" title="Close"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('about')" title="Minimize"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('about')" title="Expand"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="user" class="window-title-icon"></i>
+          <span>About Me — Yelliz Yuthika</span>
+        </div>
+        <div class="window-actions">
+          <span class="tag-pill">Clinical Psychology</span>
+        </div>
+      </div>
+
+      <div class="window-content split-profile-view">
+        <div class="profile-left-col">
+          <div class="profile-photo-frame">
+            <img src="assets/linkedin_avatar.jpg" alt="Yelliz Yuthika" class="profile-avatar-img">
+            <div class="photo-caption">BSc Clinical Psychology Undergraduate</div>
+          </div>
+          
+          <div class="quick-profile-badges">
+            <div class="badge-item">
+              <i data-lucide="brain" class="b-icon"></i>
+              <span>SRM Medical College Hospital</span>
+            </div>
+            <div class="badge-item">
+              <i data-lucide="award" class="b-icon"></i>
+              <span>Class 12: 94.6% • Montfort</span>
+            </div>
+            <div class="badge-item">
+              <i data-lucide="shield" class="b-icon"></i>
+              <span>Brown Belt in Karate</span>
+            </div>
+            <div class="badge-item">
+              <i data-lucide="check-circle" class="b-icon"></i>
+              <span>13 Professional Certifications</span>
+            </div>
+          </div>
+
+          <div class="profile-contacts-box">
+            <a href="tel:+918667407733" class="contact-quick-link">
+              <i data-lucide="phone"></i> +91 8667407733
+            </a>
+            <a href="mailto:yuthika1012@gmail.com" class="contact-quick-link">
+              <i data-lucide="mail"></i> yuthika1012@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="profile-right-col">
+          <!-- Artistic LinkedIn Banner Artwork -->
+          <div class="profile-banner-art-box">
+            <img src="assets/linkedin_banner.jpg" alt="Learning. Researching. Understanding Human Behaviour." class="profile-banner-img">
+          </div>
+
+          <h2 class="profile-greeting">
+            Hey! I'm <strong class="text-highlight">Yelliz Yuthika</strong> (She/Her),
+          </h2>
+          <p class="profile-headline-tag">
+            <strong>Clinical Psychology Undergraduate</strong> | From Curiosity to Evidence: Exploring Human Behaviour & Mental Health | Community Engagement | Interdisciplinary Learning
+          </p>
+
+          <div class="profile-about-block">
+            <h4 class="about-section-heading">About</h4>
+            <p class="profile-body-text">
+              I'm a <strong>BSc Clinical Psychology</strong> student at <strong>SRM Medical College Hospital and Research Centre</strong> with a strong curiosity about people, ideas, and the different ways disciplines can come together to understand human behaviour.
+            </p>
+            <p class="profile-body-text">
+              While psychology is my academic foundation, I'm equally interested in exploring areas such as <strong>research, mental health, and evidence-based practice</strong>.
+            </p>
+            <p class="profile-body-text">
+              I enjoy learning beyond the classroom through seminars, workshops, projects, presentations, volunteering, and opportunities to collaborate with people from different backgrounds. I'm still exploring the different directions my interests can take me, and I see that as an opportunity to keep learning, build new skills, and discover where I can contribute meaningfully.
+            </p>
+          </div>
+
+          <div class="profile-highlights-grid">
+            <div class="highlight-card">
+              <div class="hl-number">SRM College</div>
+              <div class="hl-label">BSc Clinical Psychology</div>
+            </div>
+            <div class="highlight-card">
+              <div class="hl-number">13 Certs</div>
+              <div class="hl-label">ABA, SFBT, TAT & Research</div>
+            </div>
+            <div class="highlight-card">
+              <div class="hl-number">TEJAS RYLA</div>
+              <div class="hl-label">Rotary District 2982</div>
+            </div>
+          </div>
+
+          <div class="profile-action-row">
+            <button class="btn btn-primary" onclick="openWindow('certifications')">
+              <i data-lucide="shield-check"></i> View Certifications
+            </button>
+            <button class="btn btn-secondary" onclick="openWindow('education')">
+              <i data-lucide="graduation-cap"></i> View Education
+            </button>
+            <a href="https://www.linkedin.com/in/yelliz-yuthika-761441408?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i data-lucide="linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ==========================================================================
+         MACOS WINDOW: EXPERIENCE (Exact LinkedIn Experience Roles)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowExperience" style="display: none; top: 11%; left: 20%; width: 750px; z-index: 101;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('experience')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('experience')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('experience')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="briefcase" class="window-title-icon text-amber"></i>
+          <span>Experience & Roles — Yelliz Yuthika</span>
+        </div>
+        <div class="window-actions">
+          <span class="tag-pill">3 Active Roles</span>
+        </div>
+      </div>
+
+      <div class="window-content experience-view">
+        <!-- Role 1: Clinical Psychology Student -->
+        <div class="exp-card-item">
+          <div class="exp-logo-box exp-srm-logo">
+            <i data-lucide="brain" class="exp-icon"></i>
+          </div>
+          <div class="exp-details-col">
+            <div class="exp-header-row">
+              <h3 class="exp-role-title">Clinical Psychology Student</h3>
+              <span class="exp-present-badge">Present</span>
+            </div>
+            <h4 class="exp-company-name">SRM School of Allied Health Sciences</h4>
+            <div class="exp-meta-row">
+              <span class="exp-dates">Jun 2024 — Present • 1 yr 6 mos</span>
+              <span class="exp-location">Chennai, Tamil Nadu, India</span>
+            </div>
+            <p class="exp-summary-text">
+              Undergraduate clinical training in human behaviour, psychological assessments, rapport building, and clinical observation within medical and allied health settings.
+            </p>
+            <div class="exp-skills-row">
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Rapportive</span>
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Clinical Exposure</span>
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Evidence-Based Practice</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2: Green Rotaractor -->
+        <div class="exp-card-item">
+          <div class="exp-logo-box exp-rotary-logo">
+            <i data-lucide="flower-2" class="exp-icon"></i>
+          </div>
+          <div class="exp-details-col">
+            <div class="exp-header-row">
+              <h3 class="exp-role-title">Green Rotaractor</h3>
+              <span class="exp-present-badge">Present</span>
+            </div>
+            <h4 class="exp-company-name">Rotaract Club of SRM KTR</h4>
+            <div class="exp-meta-row">
+              <span class="exp-dates">Sep 2024 — Present • 3 mos</span>
+              <span class="exp-location">Chennai, Tamil Nadu, India</span>
+            </div>
+            <p class="exp-summary-text">
+              Spearheading community service initiatives, youth mobilization, sustainable green projects, and active participation in Rotaract leadership assemblies.
+            </p>
+            <div class="exp-skills-row">
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Community Service</span>
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Active Participation</span>
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Youth Leadership</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 3: Member of UWP -->
+        <div class="exp-card-item">
+          <div class="exp-logo-box exp-uwp-logo">
+            <i data-lucide="users" class="exp-icon"></i>
+          </div>
+          <div class="exp-details-col">
+            <div class="exp-header-row">
+              <h3 class="exp-role-title">Member of UWP</h3>
+              <span class="exp-present-badge">Present</span>
+            </div>
+            <h4 class="exp-company-name">SRMIST, Kattankulathur, Chennai, Tamil Nadu</h4>
+            <div class="exp-meta-row">
+              <span class="exp-dates">Oct 2024 — Present • 1 yr 2 mos</span>
+              <span class="exp-location">Chennai, Tamil Nadu, India</span>
+            </div>
+            <p class="exp-summary-text">
+              Engaging in multi-disciplinary collaborations, university initiatives, team problem solving, and versatile project participation across academic departments.
+            </p>
+            <div class="exp-skills-row">
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Interdisciplinary Collaboration</span>
+              <span class="exp-skill-chip"><i data-lucide="gem" class="chip-icon"></i> Versatile and Flexible Participation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ==========================================================================
+         MACOS WINDOW 2: EDUCATION & ACADEMICS (Exact LinkedIn Education)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowEducation" style="display: none; top: 11%; left: 20%; width: 750px; z-index: 101;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('education')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('education')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('education')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="graduation-cap" class="window-title-icon text-amber"></i>
+          <span>Education & Academic Background</span>
+        </div>
+      </div>
+
+      <div class="window-content education-view">
+        <div class="edu-card-item">
+          <div class="edu-logo-box">
+            <i data-lucide="school" class="edu-icon"></i>
+          </div>
+          <div class="edu-details-col">
+            <div class="edu-header-row">
+              <h3 class="edu-institution">SRM Medical College Hospital and Research Centre</h3>
+              <span class="edu-present-tag">Present</span>
+            </div>
+            <h4 class="edu-degree">Bachelors of Science, Clinical Psychology</h4>
+            <div class="edu-skills-tags">
+              <span class="tag-chip">Networking</span>
+              <span class="tag-chip">Clinical Psychology</span>
+              <span class="tag-chip">Research & Human Behaviour</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card-item">
+          <div class="edu-logo-box">
+            <i data-lucide="book-open" class="edu-icon"></i>
+          </div>
+          <div class="edu-details-col">
+            <div class="edu-header-row">
+              <h3 class="edu-institution">Montfort Matriculation Higher Secondary School</h3>
+              <span class="edu-dates">2021 — 2025</span>
+            </div>
+            <h4 class="edu-degree">Higher Secondary Education, Bio-Mathematics</h4>
+            
+            <div class="edu-grade-badge">
+              <strong>Grade:</strong> Class 10: <strong>93.4%</strong> | Class 12: <strong>94.6%</strong>
+            </div>
+
+            <p class="edu-activities-text">
+              <strong>Activities and societies:</strong> Developed strong academic and collaborative skills through active participation in school activities and team-based initiatives. Achieved school-level subject excellence in <strong>English and Biology</strong> during secondary and higher secondary education, respectively, while strengthening communication, teamwork, and coordination skills.
+            </p>
+
+            <div class="edu-skills-tags">
+              <span class="tag-chip">Networking</span>
+              <span class="tag-chip">Teamwork</span>
+              <span class="tag-chip">Subject Excellence in Biology & English</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card-item">
+          <div class="edu-logo-box">
+            <i data-lucide="award" class="edu-icon"></i>
+          </div>
+          <div class="edu-details-col">
+            <div class="edu-header-row">
+              <h3 class="edu-institution">The Ashram TASSC Model School</h3>
+              <span class="edu-dates">2013 — 2021</span>
+            </div>
+            <h4 class="edu-degree">Primary and Secondary Education</h4>
+
+            <p class="edu-activities-text">
+              <strong>Activities and societies:</strong> Participated actively in extracurricular activities including dance, music, yoga, karate, and mathematics-based enrichment programmes. Earned a <strong>Brown Belt in Karate</strong> while developing interests in performing arts, physical activities, and problem-solving.
+            </p>
+
+            <div class="edu-skills-tags">
+              <span class="tag-chip">Brown Belt in Karate</span>
+              <span class="tag-chip">Dance & Performing Arts</span>
+              <span class="tag-chip">Yoga & Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Honors, Academic Distinctions & Languages -->
+        <div class="edu-honors-section">
+          <h3 class="section-subheading"><i data-lucide="trophy"></i> Honors & Awards (Montfort & SRM)</h3>
+          
+          <div class="honors-grid">
+            <!-- Honor 1: Tamilnadu State Level English Proficiency -->
+            <div class="honor-card">
+              <div class="honor-icon"><i data-lucide="award"></i></div>
+              <div class="honor-details">
+                <span class="honor-title">Second class in Tamilnadu State Level English Proficiency</span>
+                <span class="honor-meta">Issued by Bharath Institute of English • Jan 2025</span>
+                <span class="honor-association">Associated with Montfort Matriculation Higher Secondary School</span>
+                <p class="honor-desc">
+                  "This recognition reflects my continued interest in English language proficiency, communication, and academic development."
+                </p>
+              </div>
+            </div>
+
+            <!-- Honor 2: 1st Place in National Space Day Ideathon -->
+            <div class="honor-card honor-with-cert">
+              <div class="honor-icon trophy-gold"><i data-lucide="trophy"></i></div>
+              <div class="honor-details">
+                <div class="honor-title-row">
+                  <span class="honor-title">1st place in National Space Day Ideathon</span>
+                  <span class="cert-link-chip" onclick="zoomImage('assets/certificates/ideathon_space_day.jpg', 'National Space Day 2024 — 1st Place Ideathon Certificate of Appreciation (Easwari Engineering College)')">
+                    <i data-lucide="file-check"></i> View Certificate
+                  </span>
+                </div>
+                <span class="honor-meta">Issued by SRM Easwari Engineering College • Aug 2024</span>
+                <span class="honor-association">Associated with Montfort Matriculation Higher Secondary School</span>
+                <p class="honor-desc">
+                  "Learned to approach complex problems through scientific research, collaborative ideation, critical thinking, and practical problem-solving while developing skills in teamwork, innovation, and presenting feasible solutions to real-world challenges."
+                </p>
+                <div class="honor-cert-inline-thumb" onclick="zoomImage('assets/certificates/ideathon_space_day.jpg', 'National Space Day 2024 — 1st Place Ideathon Certificate of Appreciation (Easwari Engineering College)')">
+                  <img src="assets/certificates/ideathon_space_day.jpg" alt="1st Place Ideathon Certificate" class="inline-cert-img">
+                  <span class="inline-cert-label"><i data-lucide="zoom-in"></i> Certificate of Appreciation • 1st Place</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Honor 3: Subject topper (Biology) -->
+            <div class="honor-card">
+              <div class="honor-icon"><i data-lucide="medal"></i></div>
+              <div class="honor-details">
+                <span class="honor-title">Subject topper (Biology) in HSC XII Board Examination</span>
+                <span class="honor-meta">Issued by Montfort Matriculation Higher Secondary School • Jan 2024</span>
+                <span class="honor-association">Associated with Montfort Matriculation Higher Secondary School</span>
+                <p class="honor-desc">
+                  "This achievement strengthened my interest in the biological sciences and appreciation for understanding the scientific foundations of human behaviour and health."
+                </p>
+              </div>
+            </div>
+
+            <!-- Honor 4: Subject topper (English) -->
+            <div class="honor-card">
+              <div class="honor-icon"><i data-lucide="star"></i></div>
+              <div class="honor-details">
+                <span class="honor-title">Subject topper (English) in SSLC Board Examination</span>
+                <span class="honor-meta">Issued by Montfort Matriculation Higher Secondary School • Jan 2023</span>
+                <span class="honor-association">Associated with Montfort Matriculation Higher Secondary School</span>
+                <p class="honor-desc">
+                  "This achievement reflects my language proficiency, communication skills, and consistent academic performance."
+                </p>
+              </div>
+            </div>
+
+            <!-- Honor 5: Karate Brown Belt -->
+            <div class="honor-card">
+              <div class="honor-icon martial-arts"><i data-lucide="shield"></i></div>
+              <div class="honor-details">
+                <span class="honor-title">Karate Brown Belt</span>
+                <span class="honor-meta">Issued by India Veerakalai Udalaroghya Sangam • Jan 2013</span>
+                <span class="honor-association">Associated with The Ashram TASSC Model school</span>
+                <p class="honor-desc">
+                  "The experience strengthened my discipline, perseverance, focus, and self-confidence — qualities that extend beyond the training ground."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages Sub-Section (Exact 6 Languages from LinkedIn) -->
+          <h3 class="section-subheading" style="margin-top: 24px;"><i data-lucide="languages"></i> Languages Known</h3>
+          <div class="languages-grid">
+            <div class="lang-card-item">
+              <div class="lang-main">
+                <span class="lang-title">English</span>
+                <span class="lang-badge prof-full">Full professional proficiency</span>
+              </div>
+              <span class="lang-context">SSLC & State Level English Topper</span>
+            </div>
+
+            <div class="lang-card-item">
+              <div class="lang-main">
+                <span class="lang-title">Tamil</span>
+                <span class="lang-badge prof-full">Full professional proficiency</span>
+              </div>
+              <span class="lang-context">Native / Working Language</span>
+            </div>
+
+            <div class="lang-card-item">
+              <div class="lang-main">
+                <span class="lang-title">German</span>
+                <span class="lang-badge prof-elem">Elementary proficiency</span>
+              </div>
+              <span class="lang-context">Basic Conversational & Academic</span>
+            </div>
+
+            <div class="lang-card-item">
+              <div class="lang-main">
+                <span class="lang-title">Hindi</span>
+                <span class="lang-badge prof-work">Limited working proficiency</span>
+              </div>
+              <span class="lang-context">Conversational & Communicative</span>
+            </div>
+
+            <div class="lang-card-item">
+              <div class="lang-main">
+                <span class="lang-title">Sign Languages</span>
+                <span class="lang-badge prof-elem">Elementary proficiency</span>
+              </div>
+              <span class="lang-context">Certified Indian Sign Language (Talking Hands)</span>
+            </div>
+
+            <div class="lang-card-item">
+              <div class="lang-main">
+                <span class="lang-title">Spanish</span>
+                <span class="lang-badge prof-elem">Elementary proficiency</span>
+              </div>
+              <span class="lang-context">Elementary Linguistic Studies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ==========================================================================
+         MACOS WINDOW: SERVICES, EVENTS & FIELDWORK (Exact LinkedIn Posts & Photos)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowEvents" style="display: none; top: 11%; left: 19%; width: 780px; z-index: 102;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('events')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('events')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('events')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="sparkles" class="window-title-icon text-cyan"></i>
+          <span>Services, Events & Clinical Fieldwork</span>
+        </div>
+        <div class="window-actions">
+          <span class="tag-pill">Fieldwork & Outreach</span>
+        </div>
+      </div>
+
+      <div class="window-content events-view">
+        <div class="events-header-block">
+          <p class="events-lead-text">
+            Academic field visits, clinical laboratory simulations, community mental health stalls, and interdisciplinary student initiatives.
+          </p>
+        </div>
+
+        <div class="events-grid-cards">
+          <!-- Event 1: NSG Regional Hub Visit -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/nsg_commandos_visit.jpg', 'National Security Guard (NSG) Regional Hub Visit — Vandalur, Chennai')">
+              <img src="assets/events/nsg_commandos_visit.jpg" alt="NSG Visit" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Photo</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-field"><i data-lucide="shield"></i> Fieldwork & Military Psychology</div>
+              <h4 class="event-headline">Academic Exposure: National Security Guard (NSG) Regional Hub Visit</h4>
+              <span class="event-date-loc">Vandalur, Chennai • SRM Clinical Psychology Cohort</span>
+              <p class="event-caption-text">
+                "As part of our academic exposure, I had the opportunity to visit the National Security Guard (NSG) Regional Hub near Vandalur, Chennai, along with 27 undergraduate and postgraduate Clinical Psychology students and faculty members." Gained direct perspective on operational resilience, stress management under extreme security conditions, and command psychology.
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">NSG Hub</span>
+                <span class="ev-tag">Operational Resilience</span>
+                <span class="ev-tag">सर्वत्र सर्वोत्तम सुरक्षा</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: Mirror of Affirmation -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/mirror_of_affirmation.jpg', 'World Mental Health Day: Mirror of Affirmation Activity')">
+              <img src="assets/events/mirror_of_affirmation.jpg" alt="Mirror of Affirmation" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Photo</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-community"><i data-lucide="heart"></i> Hospital Volunteering & Mental Health</div>
+              <h4 class="event-headline">World Mental Health Day: "Mirror of Affirmation" Initiative</h4>
+              <span class="event-date-loc">World Mental Health Day • Hospital Lobby Stall</span>
+              <p class="event-caption-text">
+                "On World Mental Health Day, Kavya Manoj Kumar and I had a wonderful opportunity to volunteer through an interactive activity called 'Mirror of Affirmation.' 🪞💛 We created a simple, inviting space where patients, hospital visitors, and healthcare staff could pause, write positive affirmations, and experience empathetic connection."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Affirmations</span>
+                <span class="ev-tag">Hospital Community</span>
+                <span class="ev-tag">Mental Wellness</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: EEG Brain Mapping Lab Exposure -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/eeg_brain_scan.jpg', 'Clinical Neuropsychology: EEG Brain Mapping & Electrode Placement')">
+              <img src="assets/events/eeg_brain_scan.jpg" alt="EEG Lab Scanning" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Photo</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-clinical"><i data-lucide="brain"></i> Diagnostic Neuropsychology</div>
+              <h4 class="event-headline">Clinical Neuropsychology: EEG Brain Mapping Lab Practice</h4>
+              <span class="event-date-loc">SRM Department of Clinical Psychology Labs</span>
+              <p class="event-caption-text">
+                Hands-on clinical training in Electroencephalogram (EEG) electrode cap positioning, neural signal acquisition, and psychophysiological mapping to explore cognitive states, brain rhythms, and diagnostic indicators in human behaviour.
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">EEG Mapping</span>
+                <span class="ev-tag">Neuropsychology</span>
+                <span class="ev-tag">Lab Training</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4: MINDVERSE Exhibition -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/mindverse_group_photo.jpg', 'MINDVERSE: Mental Health Awareness Exhibition — Clinical Psychology Cohort')">
+              <img src="assets/events/mindverse_group_photo.jpg" alt="MINDVERSE Cohort Group Photo" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Photo</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-outreach"><i data-lucide="users"></i> University Mental Wellbeing Exhibition</div>
+              <h4 class="event-headline">MINDVERSE — Mental Wellbeing Exhibition</h4>
+              <span class="event-date-loc">13 & 14 October • Lobby Entrance, SRM Medical College</span>
+              <p class="event-caption-text">
+                "Psychology is not just about understanding the mind. It is about understanding people. Being part of MindVerse, a mental health awareness exhibition, was an enriching experience bringing together clinical students, healthcare professionals, and campus visitors." Organized by the Department of Clinical Psychology in collaboration with University Wellness Program (School of Public Health).
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">MINDVERSE</span>
+                <span class="ev-tag">Cohort Group</span>
+                <span class="ev-tag">Public Health</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5: Psychological First Aid (PFA) Short Film -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/pfa_short_film.jpg', 'Psychological First Aid (PFA) Short Film Simulation Project')">
+              <img src="assets/events/pfa_short_film.jpg" alt="PFA Short Film" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Film Still</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-crisis"><i data-lucide="life-buoy"></i> Crisis Intervention & Media Production</div>
+              <h4 class="event-headline">Psychological First Aid (PFA): Disaster Simulation Short Film</h4>
+              <span class="event-date-loc">SRM Clinical Psychology Media Project</span>
+              <p class="event-caption-text">
+                "As part of our learning in Psychological First Aid (PFA), our team created a short film demonstrating how psychological support can be provided to a child experiencing acute distress after an earthquake." Demonstrated rapport building, grounding techniques, and de-escalation under emergency conditions.
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Psychological First Aid</span>
+                <span class="ev-tag">Child Trauma Support</span>
+                <span class="ev-tag">Simulation Film</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 6: Behind the Scenes (BTS) Collaboration -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/short_film_bts.jpg', 'Behind The Scenes: Teamwork & Production Collaboration')">
+              <img src="assets/events/short_film_bts.jpg" alt="Short Film BTS" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View BTS</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-creative"><i data-lucide="video"></i> Creative Direction & Teamwork</div>
+              <h4 class="event-headline">Behind The Scenes: Short Film Production & Creative Collaboration</h4>
+              <span class="event-date-loc">Clinical Psychology Team Showcase</span>
+              <p class="event-caption-text">
+                "Behind every short film is a process of planning, collaboration, experimentation, and plenty of moments that never make it to the final cut. Our BTS captures the teamwork and creativity that went into bringing psychological concepts to life on screen."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Team Collaboration</span>
+                <span class="ev-tag">Video Production</span>
+                <span class="ev-tag">Peer Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 7: Vision 2047 Conclave at MSSW -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/vision_2047_mssw.jpg', 'Vision 2047 Multidisciplinary Conclave — Madras School of Social Work (MSSW)')">
+              <img src="assets/events/vision_2047_mssw.jpg" alt="Vision 2047 Conclave" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Conclave</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-field"><i data-lucide="landmark"></i> Multidisciplinary Academic Conclave</div>
+              <h4 class="event-headline">Vision 2047: Madras School of Social Work (MSSW) Conclave</h4>
+              <span class="event-date-loc">MSSW Chennai • Multidisciplinary Forum</span>
+              <p class="event-caption-text">
+                "Attended Vision 2047 at The Madras School of Social Work (MSSW), a multidisciplinary conclave that brought together conversations, experiential learning, creativity, and perspectives on the future of healthcare, social work, and youth empowerment."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Vision 2047</span>
+                <span class="ev-tag">MSSW</span>
+                <span class="ev-tag">Interdisciplinary Policy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 8: UWP Dance Competition -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/uwp_dance_certificate.jpg', 'University Wellness Program Dance Competition Certificate — SRM IST')">
+              <img src="assets/events/uwp_dance_certificate.jpg" alt="UWP Dance Certificate" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Certificate</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-creative"><i data-lucide="music"></i> Cultural Arts & Environmental Advocacy</div>
+              <h4 class="event-headline">University Wellness Program: "Save Environment" Dance Competition</h4>
+              <span class="event-date-loc">10th April • SRM IST Chennai (Sponsored by Sutraflex Agency, Malaysia)</span>
+              <p class="event-caption-text">
+                "Obtained certification on cultural context: University Wellness Program Dance Competition from SRM IST Chennai! A graceful side of myself, still aiming for homeostasis between academics, arts, and self-expression."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Performing Arts</span>
+                <span class="ev-tag">Cultural Context</span>
+                <span class="ev-tag">Save Environment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 9: World Peer Support Day Webinar -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/peer_support_webinar.jpg', 'World Peer Support Day: The Difference Students Can Make')">
+              <img src="assets/events/peer_support_webinar.jpg" alt="Peer Support Webinar" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Webinar</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-outreach"><i data-lucide="users-round"></i> Peer Support & Campus Wellbeing</div>
+              <h4 class="event-headline">World Peer Support Day: "The Difference Students Can Make"</h4>
+              <span class="event-date-loc">15 October • Saathi Support, Sangath & King's College London</span>
+              <p class="event-caption-text">
+                "Participating in the World Peer Support event was an insightful opportunity to understand what is peer supporting and how peer support can make mental health support more accessible, relatable, and de-stigmatized across collegiate campuses."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Peer Advocacy</span>
+                <span class="ev-tag">Campus Health</span>
+                <span class="ev-tag">Saathi Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 10: TEJAS Multi-District RYLA Bangalore -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/ryla_bangalore_hall.jpg', 'TEJAS Multi-District RYLA — Main Convention Hall (Ramee Guestline Bangalore)')">
+              <img src="assets/events/ryla_bangalore_hall.jpg" alt="TEJAS RYLA Bangalore" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Photo</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-field"><i data-lucide="award"></i> Multi-District Rotary Leadership</div>
+              <h4 class="event-headline">TEJAS Multi-District RYLA (Bangalore)</h4>
+              <span class="event-date-loc">31st Oct & 1st Nov • Ramee Guestline Hotel, Chandapura, Bangalore</span>
+              <p class="event-caption-text">
+                "Being a part of TEJAS – Multi-District Rotary Youth Leadership Awards (RYLA) 2026, held on 31st October and 1st November at Ramee Guestline Hotel, Chandapura, Bangalore, was an experience that I will genuinely cherish. Connecting with delegates across District 2982 and 3234 to engage in intense problem-solving, collaborative leadership, and youth mobilization."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">TEJAS RYLA</span>
+                <span class="ev-tag">Convention Hall</span>
+                <span class="ev-tag">Youth Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 11: MINDVERSE Mental Health Exhibition Official Schedule -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/mindverse_flyer.jpg', 'MINDVERSE Exhibition Official Schedule & Department Overview')">
+              <img src="assets/events/mindverse_flyer.jpg" alt="MINDVERSE Official Flyer" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Flyer</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-outreach"><i data-lucide="sparkles"></i> Department of Clinical Psychology</div>
+              <h4 class="event-headline">MINDVERSE: Explore • Experience • Understand — Official Programme</h4>
+              <span class="event-date-loc">14 & 15 October • SRM Medical College Lobby</span>
+              <p class="event-caption-text">
+                Organized by the Department of Clinical Psychology (SRM School of Allied Health Sciences) in collaboration with University Wellness Program (School of Public Health). Open exhibition welcoming students, faculty, and clinical staff to engage with psychological wellbeing assessments, psychoeducational interactive models, and community outreach.
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Clinical Psychology</span>
+                <span class="ev-tag">School of Public Health</span>
+                <span class="ev-tag">Community Outreach</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 12: Saathi Campus Peer Support Program Flyer -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/saathi_webinar_post.jpg', 'Saathi Peer Support Program — Exploring Campus Well-being')">
+              <img src="assets/events/saathi_webinar_post.jpg" alt="Saathi Peer Support Flyer" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Program</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-community"><i data-lucide="heart-handshake"></i> Student Wellbeing & Mental Health</div>
+              <h4 class="event-headline">Saathi Support: "The Difference Students Can Make on Campus"</h4>
+              <span class="event-date-loc">Saathi Support & Youth for Mental Health Foundation</span>
+              <p class="event-caption-text">
+                Webinar focused on non-judgmental student listening, establishing peer support systems on collegiate campuses, identifying early signs of distress, and bridging the gap between student peers and formal psychological counseling support.
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Peer Support</span>
+                <span class="ev-tag">Non-Judgmental Listening</span>
+                <span class="ev-tag">Campus Health</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 13: Rotaract First Meetup & Academic Field Exposure -->
+          <div class="event-feed-card">
+            <div class="event-photo-container" onclick="zoomImage('assets/events/nsg_and_rotaract_post.jpg', 'Rotaract Club of SRM KTR First Meetup & NSG Hub Fieldwork')">
+              <img src="assets/events/nsg_and_rotaract_post.jpg" alt="Rotaract Meetup & NSG Hub" class="event-img">
+              <span class="event-zoom-badge"><i data-lucide="zoom-in"></i> View Post</span>
+            </div>
+            <div class="event-body-content">
+              <div class="event-category-pill pill-field"><i data-lucide="users"></i> Rotaract Club & Clinical Cohort</div>
+              <h4 class="event-headline">Rotaract Club of SRM KTR First Meetup & Field Engagement</h4>
+              <span class="event-date-loc">9th October • SRMIST Kattankulathur</span>
+              <p class="event-caption-text">
+                "Happy to share the memory of First Meet-Up with Rotaract Club of SRM KTR on 9th October! Active engagement in community-driven youth projects, social impact initiatives, and cross-functional leadership on campus."
+              </p>
+              <div class="event-tags-row">
+                <span class="ev-tag">Rotaract SRM KTR</span>
+                <span class="ev-tag">Green Rotaractor</span>
+                <span class="ev-tag">Campus Engagement</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ==========================================================================
+         MACOS WINDOW 3: ALL 13 LICENSES & CERTIFICATIONS (Exact LinkedIn Certs)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowCertifications" style="display: none; top: 11%; left: 19%; width: 780px; z-index: 102;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('certifications')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('certifications')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('certifications')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="shield-check" class="window-title-icon text-green"></i>
+          <span>Licenses & Certifications (Verified Credentials)</span>
+        </div>
+        <div class="window-actions">
+          <span class="tag-pill">All Verified Credentials</span>
+        </div>
+      </div>
+
+      <div class="window-content certifications-view">
+        <div class="certs-filter-tabs">
+          <button class="cert-tab active" onclick="filterCerts('all')">All Verified</button>
+          <button class="cert-tab" onclick="filterCerts('clinical')">Clinical & Psychology</button>
+          <button class="cert-tab" onclick="filterCerts('leadership')">Leadership & Community</button>
+          <button class="cert-tab" onclick="filterCerts('skills')">Research & Competitions</button>
+        </div>
+
+        <div class="certs-list-container">
+          <!-- Cert 1: TEJAS Multi-District RYLA (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="leadership">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/tejas_ryla_rotary.jpg', 'TEJAS Multi-District RYLA Certificate & Plaque — Rtr. Yelliz Yuthika')">
+              <img src="assets/certificates/tejas_ryla_rotary.jpg" alt="TEJAS RYLA Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate & Plaque</span>
+                <span class="cert-date-tag">31 Oct – 1 Nov 2024</span>
+              </div>
+              <h4 class="cert-title">TEJAS Multi-District RYLA (Rotary Youth Leadership Awards)</h4>
+              <span class="cert-issuer">Rotary Club of Hosur Midtown & Rotaract Club Of Hosur Midtown Teenstars (RID 2982 / RID 3234)</span>
+              <p class="cert-summary-line">
+                Awarded for enthusiastic participation, leadership presence, energy, and commitment at the First Multi-District RYLA. Accompanied by Framed Honor Plaque and commemorative medals.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Community Engagement</span>
+                <span class="c-skill">Independent Thinking</span>
+                <span class="c-skill">Youth Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2: ABA Principles (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/aba_wings.jpg', 'Applied Behaviour Analysis (ABA) Certificate — Yelliz Yuthika W')">
+              <img src="assets/certificates/aba_wings.jpg" alt="ABA Training Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">Oct 26–30, 2024</span>
+              </div>
+              <h4 class="cert-title">One-Week Intensive Skills Training Program on Core Principles of "Applied Behaviour Analysis (ABA)"</h4>
+              <span class="cert-issuer">WINGS in association with MANASS CONNECTS</span>
+              <p class="cert-summary-line">
+                Resource Person: Madhavi P. Rao (BCaBA, Consultant Psychologist) • Founder & MD: Beena Kumari S. Intensive practical training on ABA principles and behavioural interventions.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Practical Application of ABA</span>
+                <span class="c-skill">Basics of ABA</span>
+                <span class="c-skill">Behavioural Assessment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 3: TAT (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/tat_everglowmind.jpg', 'Thematic Apperception Test Workshop Certificate — Yelliz Yuthika W')">
+              <img src="assets/certificates/tat_everglowmind.jpg" alt="TAT Workshop Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">25 Oct 2024</span>
+              </div>
+              <h4 class="cert-title">Workshop on "THEMATIC APPERCEPTION TEST"</h4>
+              <span class="cert-issuer">EVERGLOWMIND ACADEMY</span>
+              <p class="cert-summary-line">
+                Completed hands-on workshop training on TAT administration, storytelling analysis, projective psychological evaluation, and clinical interpretation. Signatories: Dr Arpita Sharma & Dr Anirban Dutta.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Practical Application of TAT</span>
+                <span class="c-skill">Theory of TAT</span>
+                <span class="c-skill">Projective Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 4: Research Methodology (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="skills">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/research_methodology_tnpa.jpg', 'Research Methodology Level One Certificate (Score: 98%) — Yelliz Yuthika W')">
+              <img src="assets/certificates/research_methodology_tnpa.jpg" alt="Research Methodology Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill high-score-pill"><i data-lucide="star"></i> Assessment Score: 98%</span>
+                <span class="cert-date-tag">Aug 8 – Sept 7, 2024 • Cert #202409 25</span>
+              </div>
+              <h4 class="cert-title">One-Month Online Certificate Course in "Research Methodology - Level One"</h4>
+              <span class="cert-issuer">Indian Institute of Psychological Research & Training (IIPRT) & Tamil Nadu Psychology Association (TNPA)</span>
+              <p class="cert-summary-line">
+                Awarded with distinction (<strong>Score: 98%</strong>) in recognition of successful completion and prescribed assessment test. Jointly certified by Dr. R. Sembiyan (Joint Director IIPRT) and Dr. K. Balamurugan (President TNPA).
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Research Skills</span>
+                <span class="c-skill">Quantitative & Qualitative Analysis</span>
+                <span class="c-skill">Score: 98%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 4: Beyond Degree VIT (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="skills">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/vit_beyond_the_degree.jpg', 'Beyond the Degree: Building Skills, Attitude and Communication for the Future Workplace — VIT')">
+              <img src="assets/certificates/vit_beyond_the_degree.jpg" alt="Beyond the Degree VIT Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">Oct 2024</span>
+              </div>
+              <h4 class="cert-title">Beyond the Degree: Building Skills, Attitude, and Communication for the Future Workplace</h4>
+              <span class="cert-issuer">School of Social Sciences and Languages, Vellore Institute of Technology (VIT)</span>
+              <p class="cert-summary-line">
+                National Virtual Seminar on modern workplace readiness, effective professional interpersonal communication, adaptive attitude, and soft skill development.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Soft Skills</span>
+                <span class="c-skill">Interpersonal Communication</span>
+                <span class="c-skill">Workplace Readiness</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 5: World Peer Support Day (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="leadership">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/saathi_peer_support.jpg', 'World Peer Support Day Certificate of Attendance — Yelliz Yuthika')">
+              <img src="assets/certificates/saathi_peer_support.jpg" alt="World Peer Support Day Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">15th October 2024 • Cert ID: YMH/WPS24/V119</span>
+              </div>
+              <h4 class="cert-title">World Peer Support Day Webinar Attendance</h4>
+              <span class="cert-issuer">Saathi Support & Youth for Mental Health Foundation</span>
+              <p class="cert-summary-line">
+                Organized as part of the Saathi Support Program. Training on peer counselling frameworks, active empathetic listening, non-judgmental support, and grassroots mental health advocacy. Signed by Hitesh Sanwal.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Peer Support</span>
+                <span class="c-skill">Peer Counselling</span>
+                <span class="c-skill">Youth Mental Health</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 6: COGMENTA International Conference (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/cogmenta_international_conf.jpg', 'COGMENTA 2-Day International Conference (Paper / Poster Presentation) — Yelliz Yuthika . W')">
+              <img src="assets/certificates/cogmenta_international_conf.jpg" alt="COGMENTA Conference Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill high-score-pill"><i data-lucide="award"></i> Paper / Poster Presentation</span>
+                <span class="cert-date-tag">7th – 8th August 2025 • Kattankulathur</span>
+              </div>
+              <h4 class="cert-title">2-Day Annual International Conference "COGMENTA: Crossroads to Positive Mental and Physical Health"</h4>
+              <span class="cert-issuer">Department of Clinical Psychology, SRM Medical College Hospital and Research Centre</span>
+              <p class="cert-summary-line">
+                Presented a Paper / Poster at the annual international conference. Signed by Dr. Bhasi Sukumaran (Professor & Head, Dept of Clinical Psychology) and Dr. Nitin M Nagarkar (Pro Vice Chancellor & Dean - Medical).
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Paper / Poster Presentation</span>
+                <span class="c-skill">Positive Mental Health</span>
+                <span class="c-skill">Volunteering Experience</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 7: SFBT Dynamics (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/sfbt_solution_centre_netherlands.jpg', 'Solution-Focused Brief Dynamics (SFBT) 12-Hour Training — Ms. Yelliz Yuthika W')">
+              <img src="assets/certificates/sfbt_solution_centre_netherlands.jpg" alt="SFBT Netherlands Training Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate (12 Hours)</span>
+                <span class="cert-date-tag">February 9th and 10th, 2025</span>
+              </div>
+              <h4 class="cert-title">Two-Day Experiential Training On "Solution - Focused Brief Dynamics: Creating High - Trust, High - Impact Clinical Teams"</h4>
+              <span class="cert-issuer">Department of Clinical Psychology, SRM Medical College in collaboration with Solutions Centre, The Netherlands</span>
+              <p class="cert-summary-line">
+                12 hours of instruction on solution-focused language, psychological safety, and applying SFADS tools across clinical and team settings. Certified by Arnoud Huibers (Director, Netherlands) and Dr. Bhasi Sukumaran.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">SFBT Basics</span>
+                <span class="c-skill">SFADS Clinical Tools</span>
+                <span class="c-skill">High-Impact Team Dynamics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 8: Parenting, Attachment & Relationships (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/parenting_attachment_srm.jpg', 'National Seminar on Parenting, Attachment and Healthy Relationship — Ms. Yelliz Yuthika . W.')">
+              <img src="assets/certificates/parenting_attachment_srm.jpg" alt="Parenting Seminar Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">28th March 2025</span>
+              </div>
+              <h4 class="cert-title">National Seminar on Parenting, Attachment and Healthy Relationship</h4>
+              <span class="cert-issuer">Department of Clinical Psychology, SRM Medical College Hospital and Research Centre</span>
+              <p class="cert-summary-line">
+                Organized at Kattankulathur campus. Training on parent-child dynamics, developmental attachment frameworks, and healthy relational psychology. Signed by Dr. Bhasi Sukumaran & Dr. D Jagadeswaran (AHS Dean).
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Relationship Building</span>
+                <span class="c-skill">Parenting Skills Training</span>
+                <span class="c-skill">Attachment Psychology</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 9: Seminar on LGBTQ+ In Contemporary India (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="leadership">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/lgbtq_seminar_srm.jpg', 'Seminar on LGBTQ+ In Contemporary India: Progress, Challenges and Road Ahead — Yelliz Yuthika W')">
+              <img src="assets/certificates/lgbtq_seminar_srm.jpg" alt="LGBTQ+ Seminar Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">3rd September 2024</span>
+              </div>
+              <h4 class="cert-title">Seminar on LGBTQ+: In Contemporary India: Progress, Challenges and Road Ahead</h4>
+              <span class="cert-issuer">Department of Clinical Psychology, SRM School of Allied Health Sciences, SRMIST</span>
+              <p class="cert-summary-line">
+                Exploration of affirmative mental healthcare, inclusive social frameworks, institutional challenges, and advocacy for queer mental health in India.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">LGBTQ+</span>
+                <span class="c-skill">LGBTQ Health</span>
+                <span class="c-skill">Inclusive Psychology</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 10: Indian Sign Language (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="skills">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/indian_sign_language.jpg', 'Basics of Indian Sign Language Certificate of Completion — Yelliz Yuthika W')">
+              <img src="assets/certificates/indian_sign_language.jpg" alt="Indian Sign Language Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">30 June 2024</span>
+              </div>
+              <h4 class="cert-title">Course on "BASICS OF INDIAN SIGN LANGUAGE"</h4>
+              <span class="cert-issuer">Talking Hands (www.talkinghands.co.in)</span>
+              <p class="cert-summary-line">
+                Comprehensive training in Indian Sign Language (ISL) alphabets, foundational gestures, non-verbal expressions, and accessible interpersonal communication.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Sign Language</span>
+                <span class="c-skill">Inclusive Communication</span>
+                <span class="c-skill">Accessibility</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 11: Rapport Building For Mental Health (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/rapport_building_psychiccmantraa.jpg', 'Rapport Building for Mental Health Professionals Certificate — Yelliz Yuthika. W')">
+              <img src="assets/certificates/rapport_building_psychiccmantraa.jpg" alt="Rapport Building Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">13th May 2024 • Cert #68018T24017T25</span>
+              </div>
+              <h4 class="cert-title">Workshop on "Rapport Building for Mental Health Professionals For Real Session Techniques"</h4>
+              <span class="cert-issuer">The Psychicc Mantraa (Accredited by MSME & WMHD)</span>
+              <p class="cert-summary-line">
+                Experiential training on therapeutic alliance, active listening, relaxation techniques, and reflective insights conducted by Riya Khudania (Therapist & Founder).
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Relaxation Techniques</span>
+                <span class="c-skill">Client Rapport</span>
+                <span class="c-skill">Therapeutic Communication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 12: World Suicide Prevention Day Webinar (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="clinical">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/suicide_prevention_tnpa.jpg', 'World Suicide Prevention Day Certificate of Achievement — Yelliz Yuthika W')">
+              <img src="assets/certificates/suicide_prevention_tnpa.jpg" alt="Suicide Prevention Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="check-circle-2"></i> Verified Certificate</span>
+                <span class="cert-date-tag">13 September 2024 • Cert #UK7Y2W-CE000008</span>
+              </div>
+              <h4 class="cert-title">World Suicide Prevention Day: "Enhancing Mental Health : Strategies for Suicide Prevention"</h4>
+              <span class="cert-issuer">Tamilnadu Psychology Association (TNPA)</span>
+              <p class="cert-summary-line">
+                Certificate of achievement for excellent participation in suicide prevention strategies, risk assessment, community intervention, and crisis intervention protocols.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Risk Assessment</span>
+                <span class="c-skill">Crisis Intervention</span>
+                <span class="c-skill">Preventive Strategies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 13: National Space Day 2024 Ideathon Placement (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="skills">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/certificates/ideathon_space_day.jpg', 'National Space Day 2024 Ideathon Placement Certificate of Appreciation — Easwari Engineering College')">
+              <img src="assets/certificates/ideathon_space_day.jpg" alt="National Space Day Ideathon Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill high-score-pill"><i data-lucide="trophy"></i> Ideathon Placement Winner</span>
+                <span class="cert-date-tag">7th August 2024 • Ramapuram, Chennai</span>
+              </div>
+              <h4 class="cert-title">"National Space Day 2024" — Ideathon Placement Certificate of Appreciation</h4>
+              <span class="cert-issuer">Department of Mechanical Engineering, Easwari Engineering College (SRM Group)</span>
+              <p class="cert-summary-line">
+                Awarded for placing in the competitive IDEATHON event at National Space Day 2024, demonstrating innovative problem solving, multidisciplinary thinking, and ideation. Signed by Coordinator Dr. M. Babu and Principal Dr. P. Deiva Sundari.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Ideathon Placement</span>
+                <span class="c-skill">Critical Thinking</span>
+                <span class="c-skill">Innovation & Ideation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 14: University Wellness Program Dance Competition (Matched with Verified Photo) -->
+          <div class="cert-card-row cert-verified-item" data-category="leadership">
+            <div class="cert-doc-thumb" onclick="zoomImage('assets/events/uwp_dance_certificate.jpg', 'University Wellness Program Dance Competition Certificate of Achievement — SRM IST')">
+              <img src="assets/events/uwp_dance_certificate.jpg" alt="UWP Dance Certificate" class="cert-thumb-img">
+              <span class="view-cert-overlay"><i data-lucide="zoom-in"></i> View</span>
+            </div>
+            <div class="cert-main-info">
+              <div class="cert-badge-row">
+                <span class="verified-pill"><i data-lucide="sparkles"></i> Certificate of Achievement</span>
+                <span class="cert-date-tag">10th April 2025 • SRM IST</span>
+              </div>
+              <h4 class="cert-title">University Wellness Program (UWP) "Save Environment" — Dance Competition</h4>
+              <span class="cert-issuer">SRM Institute of Science & Technology (Sponsored by Sutraflex Agency, Malaysia)</span>
+              <p class="cert-summary-line">
+                Certificate of Achievement for performance in the Dance Competition, reflecting artistic dedication, discipline, and environmental advocacy through performing arts.
+              </p>
+              <div class="cert-skills-chips">
+                <span class="c-skill">Dance & Performing Arts</span>
+                <span class="c-skill">Cultural Advocacy</span>
+                <span class="c-skill">Environmental Awareness</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MACOS WINDOW 4: ROTARY & LEADERSHIP
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowLeadership" style="display: none; top: 12%; left: 22%; width: 720px; z-index: 103;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('leadership')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('leadership')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('leadership')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="award" class="window-title-icon text-green"></i>
+          <span>Rotary & Rotaract District 2982 — Leadership & TEJAS RYLA</span>
+        </div>
+      </div>
+
+      <div class="window-content leadership-view">
+        <div class="rotary-banner">
+          <img src="assets/rotary_banner.jpg" alt="District 2982" class="banner-photo-cover">
+          <div class="rotary-header-content">
+            <span class="rotary-sub">ROTARY INTERNATIONAL • ROTARACT CLUB</span>
+            <h2>DISTRICT 2982</h2>
+            <p class="theme-slogan">"Create Lasting Impact" • TEJAS Multi-District RYLA</p>
+          </div>
+        </div>
+
+        <div class="leadership-cards-grid">
+          <div class="l-card">
+            <div class="l-card-icon"><i data-lucide="award"></i></div>
+            <h3>TEJAS Multi-District RYLA</h3>
+            <p>Certified in independent thinking, youth mobilization, and community engagement with Rotary Club of Hosur Midtown.</p>
+          </div>
+          <div class="l-card">
+            <div class="l-card-icon"><i data-lucide="mic"></i></div>
+            <h3>Public Speaking & Emcee</h3>
+            <p>Leading district assemblies, youth conferences, and formal ceremonies with confidence, clarity, and poise.</p>
+          </div>
+          <div class="l-card">
+            <div class="l-card-icon"><i data-lucide="heart-handshake"></i></div>
+            <h3>Community Service</h3>
+            <p>Championing educational outreach, mental wellness awareness, and social initiatives under District 2982.</p>
+          </div>
+        </div>
+
+        <div class="rotary-quote-box">
+          <p class="quote-text">
+            “True leadership isn't just about standing on a stage; it's about exploring human behaviour, uplifting our peers, and creating lasting impact in our communities.”
+          </p>
+          <span class="quote-author">— Yelliz Yuthika</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MACOS WINDOW 5: GALLERY & STAGE PHOTOS
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowGallery" style="display: none; top: 15%; left: 22%; width: 740px; z-index: 104;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('gallery')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('gallery')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('gallery')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="camera" class="window-title-icon text-purple"></i>
+          <span>Stage Moments & Visual Gallery</span>
+        </div>
+      </div>
+
+      <div class="window-content gallery-view">
+        <div class="gallery-grid">
+          <div class="gallery-card featured-photo" onclick="zoomImage('assets/hero_speaker.jpg', 'Keynote Address — Rotary District 2982')">
+            <img src="assets/hero_speaker.jpg" alt="Stage Keynote" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Keynote Address — Rotary District 2982</span>
+              <span class="gallery-sub">Public Address & Stage Presence</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" onclick="zoomImage('assets/speaker_half.jpg', 'Yelliz Yuthika — Stage Speaker & Emcee')">
+            <img src="assets/speaker_half.jpg" alt="Stage Speaker" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Emcee & Stage Host</span>
+              <span class="gallery-sub">Addressing District Assembly</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" onclick="zoomImage('assets/linkedin_avatar.jpg', 'Yelliz Yuthika — Clinical Psychology Portrait')">
+            <img src="assets/linkedin_avatar.jpg" alt="Portrait Closeup" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">BSc Clinical Psychology Portrait</span>
+              <span class="gallery-sub">SRM Medical College Hospital</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" onclick="zoomImage('assets/events/mindverse_group_photo.jpg', 'MINDVERSE — Clinical Psychology Cohort Group Photo')">
+            <img src="assets/events/mindverse_group_photo.jpg" alt="MINDVERSE Cohort" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">MINDVERSE Cohort</span>
+              <span class="gallery-sub">Clinical Psychology & Public Health</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" onclick="zoomImage('assets/events/ryla_bangalore_hall.jpg', 'TEJAS Multi-District RYLA — Bangalore Assembly')">
+            <img src="assets/events/ryla_bangalore_hall.jpg" alt="TEJAS RYLA Hall" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">TEJAS RYLA Assembly</span>
+              <span class="gallery-sub">Ramee Guestline, Bangalore</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" onclick="zoomImage('assets/events/ryla_award_stage.jpg', 'TEJAS RYLA — Stage Plaque Ceremony')">
+            <img src="assets/events/ryla_award_stage.jpg" alt="Award Stage" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Stage Plaque Ceremony</span>
+              <span class="gallery-sub">Youth Leadership Awards</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" onclick="zoomImage('assets/rotary_banner.jpg', 'Rotary District 2982 Summit Banner')">
+            <img src="assets/rotary_banner.jpg" alt="Summit Banner" class="gallery-thumbnail">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Create Lasting Impact</span>
+              <span class="gallery-sub">District 2982 Rotary & Rotaract</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ==========================================================================
+         MACOS WINDOW 6: CONTACT & CONNECT
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowContact" style="display: none; top: 12%; left: 24%; width: 700px; z-index: 105;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('contact')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('contact')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('contact')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="mail" class="window-title-icon text-red"></i>
+          <span>Get in Touch — Yelliz Yuthika</span>
+        </div>
+      </div>
+
+      <div class="window-content contact-view">
+        <div class="contact-header-text">
+          <h2>Let's Connect & Collaborate!</h2>
+          <p>For research collaborations, seminars, community volunteering, speaking inquiries, or connecting directly:</p>
+        </div>
+
+        <div class="contact-channels-grid">
+          <!-- Phone Card -->
+          <div class="channel-card">
+            <div class="channel-icon-circle phone-circle">
+              <i data-lucide="phone-call"></i>
+            </div>
+            <div class="channel-meta">
+              <span class="channel-type">Direct Phone / Call</span>
+              <a href="tel:+918667407733" class="channel-val font-mono">+91 8667407733</a>
+            </div>
+            <div class="channel-actions">
+              <a href="tel:+918667407733" class="btn btn-xs btn-primary">Call</a>
+              <button class="btn btn-xs btn-outline" onclick="copyToClipboard('+918667407733', 'Phone number copied!')">Copy</button>
+              <a href="https://wa.me/918667407733?text=Hi%20Yuthika,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you!" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-whatsapp" title="WhatsApp Chat">
+                <i data-lucide="message-circle"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="channel-card">
+            <div class="channel-icon-circle mail-circle">
+              <i data-lucide="mail"></i>
+            </div>
+            <div class="channel-meta">
+              <span class="channel-type">Official Email</span>
+              <a href="mailto:yuthika1012@gmail.com" class="channel-val font-mono">yuthika1012@gmail.com</a>
+            </div>
+            <div class="channel-actions">
+              <a href="mailto:yuthika1012@gmail.com" class="btn btn-xs btn-primary">Send Email</a>
+              <button class="btn btn-xs btn-outline" onclick="copyToClipboard('yuthika1012@gmail.com', 'Email copied!')">Copy</button>
+            </div>
+          </div>
+
+          <!-- Instagram Card -->
+          <div class="channel-card">
+            <div class="channel-icon-circle insta-circle">
+              <i data-lucide="instagram"></i>
+            </div>
+            <div class="channel-meta">
+              <span class="channel-type">Instagram Profile</span>
+              <a href="https://www.instagram.com/palapathraonandi?exln=ZmNueTQ0ZmI5OWQz" target="_blank" rel="noopener noreferrer" class="channel-val">
+                @palapathraonandi
+              </a>
+            </div>
+            <div class="channel-actions">
+              <a href="https://www.instagram.com/palapathraonandi?exln=ZmNueTQ0ZmI5OWQz" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-instagram">
+                View Instagram
+              </a>
+            </div>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <div class="channel-card">
+            <div class="channel-icon-circle linkedin-circle">
+              <i data-lucide="linkedin"></i>
+            </div>
+            <div class="channel-meta">
+              <span class="channel-type">LinkedIn Profile</span>
+              <a href="https://www.linkedin.com/in/yelliz-yuthika-761441408?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="channel-val">
+                yelliz-yuthika
+              </a>
+            </div>
+            <div class="channel-actions">
+              <a href="https://www.linkedin.com/in/yelliz-yuthika-761441408?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-linkedin">
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Message Form -->
+        <form class="contact-quick-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+          <h4>Send a Direct Message</h4>
+          <div class="form-row">
+            <input type="text" id="senderName" placeholder="Your Name" required class="form-input">
+            <input type="email" id="senderEmail" placeholder="Your Email" required class="form-input">
+          </div>
+          <div class="form-row">
+            <input type="text" id="msgSubject" placeholder="Inquiry / Collaboration Subject" required class="form-input full-width">
+          </div>
+          <div class="form-row">
+            <textarea id="msgBody" rows="3" placeholder="Write your message for Yuthika..." required class="form-input full-width"></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary send-msg-btn">
+              <i data-lucide="send"></i> Send Message
+            </button>
+            <button type="button" class="btn btn-outline" onclick="downloadVCard()">
+              <i data-lucide="download"></i> Save Contact (.vcf)
+            </button>
+            <span id="formFeedback" class="form-feedback-text"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MACOS WINDOW 6: SKILLS & ENDORSED COMPETENCIES (Exact LinkedIn Endorsements)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowSkills" style="display: none; top: 12%; left: 21%; width: 780px; z-index: 104;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('skills')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('skills')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('skills')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="sparkles" class="window-title-icon text-amber"></i>
+          <span>Skills & Endorsed Competencies — Yelliz Yuthika</span>
+        </div>
+        <div class="window-actions">
+          <span class="tag-pill">20+ Endorsed Skills</span>
+        </div>
+      </div>
+
+      <div class="window-content skills-window-view">
+        <p class="skills-lead-text">
+          Verified competencies, clinical proficiencies, and organizational endorsements from SRM Medical College Hospital, Rotary District 2982, and accredited psychology associations.
+        </p>
+
+        <!-- Core 15 Profile Skills from LinkedIn Endorsements -->
+        <div class="skills-top-list-container">
+          <div class="top-list-header">
+            <i data-lucide="award" class="top-list-icon"></i>
+            <h3>Core 15 Endorsed Skills</h3>
+            <span class="top-list-badge">Profile Matched</span>
+          </div>
+          
+          <div class="top-15-skills-grid">
+            <div class="top-skill-item">
+              <span class="skill-rank">01</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Clinical Psychology</span>
+                <span class="skill-assoc-tag">SRM School of Allied Health Sciences & SRM MCH & RC</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">02</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Clinical Exposure & Rapportive</span>
+                <span class="skill-assoc-tag">SRM School of Allied Health Sciences</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">03</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Applied Behaviour Analysis (ABA)</span>
+                <span class="skill-assoc-tag">Core Principles & Practical Application (WINGS)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">04</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Thematic Apperception Test (TAT)</span>
+                <span class="skill-assoc-tag">Theory & Practical Workshop (Everglowmind)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">05</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Solution-Focused Brief Dynamics (SFBT)</span>
+                <span class="skill-assoc-tag">SFBT Basics & Tools (Solutions Centre Netherlands)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">06</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Risk Assessment & Suicide Prevention</span>
+                <span class="skill-assoc-tag">Tamilnadu Psychology Association (TNPA)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">07</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Research Skills & Methodology</span>
+                <span class="skill-assoc-tag">IIPRT & TNPA • Assessment Score: 98%</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">08</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Client Rapport & Relaxation Techniques</span>
+                <span class="skill-assoc-tag">Real Session Techniques (The Psychicc Mantraa)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">09</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Peer Support & Peer Counselling</span>
+                <span class="skill-assoc-tag">World Peer Support Day (Saathi Support)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">10</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Community Engagement & Connections</span>
+                <span class="skill-assoc-tag">TEJAS Multi-District RYLA (Rotary District 2982/3234)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">11</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Community Service & Public Participation</span>
+                <span class="skill-assoc-tag">Green Rotaractor at Rotaract Club of SRM KTR</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">12</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Interdisciplinary Collaboration</span>
+                <span class="skill-assoc-tag">Member of UWP at SRMIST, Kattankulathur</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">13</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Sign Language Communication</span>
+                <span class="skill-assoc-tag">Basics of Indian Sign Language (Talking Hands)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">14</span>
+              <div class="skill-info">
+                <span class="skill-main-title">LGBTQ+ Health & Affirmative Care</span>
+                <span class="skill-assoc-tag">Seminar on LGBTQ+ In Contemporary India (SRM)</span>
+              </div>
+            </div>
+
+            <div class="top-skill-item">
+              <span class="skill-rank">15</span>
+              <div class="skill-info">
+                <span class="skill-main-title">Attachment Parenting & Relationship Building</span>
+                <span class="skill-assoc-tag">National Seminar on Parenting & Attachment (SRM)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Category 1: Clinical & Psychological Practice -->
+          <div class="skills-cat-card">
+            <div class="skills-cat-header">
+              <i data-lucide="brain" class="cat-icon clinical-color"></i>
+              <h4>Clinical Psychology & Assessments</h4>
+            </div>
+            <div class="skills-pills-list">
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Clinical Psychology</span>
+                <span class="endorse-badge">SRM School of Allied Health Sciences</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Clinical Exposure</span>
+                <span class="endorse-badge">SRM MCH & RC</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Rapportive & Client Rapport</span>
+                <span class="endorse-badge">The Psychicc Mantraa</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Thematic Apperception Test (TAT)</span>
+                <span class="endorse-badge">Theory & Practical Application</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Applied Behaviour Analysis (ABA)</span>
+                <span class="endorse-badge">WINGS & MANASS CONNECTS</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Solution-Focused Brief Dynamics (SFBT)</span>
+                <span class="endorse-badge">Solutions Centre Netherlands</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Risk Assessment & Suicide Prevention</span>
+                <span class="endorse-badge">Tamilnadu Psychology Association</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">EEG Brain Mapping & Diagnostics</span>
+                <span class="endorse-badge">SRM Clinical Labs</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Relaxation Techniques</span>
+                <span class="endorse-badge">Therapeutic Alliance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Research & Academic Excellence -->
+          <div class="skills-cat-card">
+            <div class="skills-cat-header">
+              <i data-lucide="microscope" class="cat-icon research-color"></i>
+              <h4>Research, Methodology & Science</h4>
+            </div>
+            <div class="skills-pills-list">
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Research Methodology</span>
+                <span class="endorse-badge highlight-gold">Exam Score: 98% • IIPRT & TNPA</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Scientific Communications</span>
+                <span class="endorse-badge">Peer-reviewed format</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Critical Thinking</span>
+                <span class="endorse-badge">Analytical Evaluation</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Paper & Poster Presentation</span>
+                <span class="endorse-badge">COGMENTA International Conf</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Interdisciplinary Collaboration</span>
+                <span class="endorse-badge">University Wellness Program</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Ideation & Problem Solving</span>
+                <span class="endorse-badge">National Space Day Ideathon</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Community, Leadership & Ethics -->
+          <div class="skills-cat-card">
+            <div class="skills-cat-header">
+              <i data-lucide="award" class="cat-icon leadership-color"></i>
+              <h4>Leadership, Youth Advocacy & Inclusion</h4>
+            </div>
+            <div class="skills-pills-list">
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Youth Leadership & Public Speaking</span>
+                <span class="endorse-badge">TEJAS Multi-District RYLA</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Community Service & Outreach</span>
+                <span class="endorse-badge">Rotaract Club of SRM KTR</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Peer Support & Campus Counselling</span>
+                <span class="endorse-badge">Saathi Support & Sangath</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">LGBTQ+ Affirmative Healthcare</span>
+                <span class="endorse-badge">Contemporary India Seminar</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Attachment Parenting & Relationships</span>
+                <span class="endorse-badge">SRM National Seminar</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Team Management & Coordination</span>
+                <span class="endorse-badge">Montfort & SRMIST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Communication, Languages & Arts -->
+          <div class="skills-cat-card">
+            <div class="skills-cat-header">
+              <i data-lucide="languages" class="cat-icon comm-color"></i>
+              <h4>Communication, Languages & Arts</h4>
+            </div>
+            <div class="skills-pills-list">
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Basics of Indian Sign Language (ISL)</span>
+                <span class="endorse-badge">Talking Hands Certified</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">English Language Excellence</span>
+                <span class="endorse-badge">SSLC Subject Topper</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">German Language</span>
+                <span class="endorse-badge">Elementary Proficiency</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Active Listening & Empathy</span>
+                <span class="endorse-badge">Real Session Techniques</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Karate Martial Arts</span>
+                <span class="endorse-badge">Brown Belt • Veerakalai</span>
+              </div>
+              <div class="skill-endorse-pill">
+                <span class="skill-name">Dance & Cultural Expression</span>
+                <span class="endorse-badge">UWP Meet Certificate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MACOS WINDOW 7: HOBBIES & PASSIONS (Dance, Music, Singing & Curiosity)
+         ========================================================================== -->
+    <section class="macos-window movable-window" id="windowHobbies" style="display: none; top: 12%; left: 23%; width: 750px; z-index: 106;">
+      <div class="window-titlebar" data-drag-handle="true">
+        <div class="traffic-lights">
+          <button class="light-btn close-btn" onclick="closeWindow('hobbies')"></button>
+          <button class="light-btn min-btn" onclick="minimizeWindow('hobbies')"></button>
+          <button class="light-btn max-btn" onclick="maximizeWindow('hobbies')"></button>
+        </div>
+        <div class="window-title">
+          <i data-lucide="heart" class="window-title-icon text-pink"></i>
+          <span>Hobbies & Passions — Dance, Music, Singing & Curiosity</span>
+        </div>
+        <div class="window-actions">
+          <span class="tag-pill">Creative Expressions</span>
+        </div>
+      </div>
+
+      <div class="window-content hobbies-window-view">
+        <div class="hobbies-intro-banner">
+          <div class="hobbies-intro-text">
+            <h3>Nurturing the Creative & Inquiring Mind</h3>
+            <p>
+              Beyond clinical rigor and scientific methodology, these creative expressions and intellectual passions cultivate mindfulness, emotional homeostasis, and a deeper resonance with people.
+            </p>
+          </div>
+        </div>
+
+        <div class="hobbies-cards-grid">
+          <!-- Hobby 1: Dance -->
+          <div class="hobby-card">
+            <div class="hobby-icon-box dance-gradient">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <div class="hobby-body">
+              <div class="hobby-header-row">
+                <h4 class="hobby-name">Dance & Movement</h4>
+                <span class="hobby-tag">Certified Achievement</span>
+              </div>
+              <p class="hobby-desc">
+                Classical, contemporary, and rhythmic movement as a medium for mind-body homeostasis, physical wellness, and emotional release.
+              </p>
+              <div class="hobby-achievement-pill" onclick="zoomImage('assets/events/uwp_dance_certificate.jpg', 'University Wellness Program Dance Competition Certificate of Achievement — SRM IST')">
+                <i data-lucide="award"></i>
+                <span>UWP "Save Environment" Dance Competition Certificate (SRM IST)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobby 2: Music -->
+          <div class="hobby-card">
+            <div class="hobby-icon-box music-gradient">
+              <i data-lucide="headphones"></i>
+            </div>
+            <div class="hobby-body">
+              <div class="hobby-header-row">
+                <h4 class="hobby-name">Music & Soundscapes</h4>
+                <span class="hobby-tag">Acoustic Mindfulness</span>
+              </div>
+              <p class="hobby-desc">
+                Immersing in acoustic melodies, piano compositions, and ambient soundscapes. Used intentionally for mindfulness, cognitive decompression, and emotional balance.
+              </p>
+              <div class="hobby-skills-row">
+                <span class="h-chip">Acoustic Mindfulness</span>
+                <span class="h-chip">Sound Therapy</span>
+                <span class="h-chip">Emotional Grounding</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobby 3: Singing -->
+          <div class="hobby-card">
+            <div class="hobby-icon-box singing-gradient">
+              <i data-lucide="mic"></i>
+            </div>
+            <div class="hobby-body">
+              <div class="hobby-header-row">
+                <h4 class="hobby-name">Singing & Vocal Expression</h4>
+                <span class="hobby-tag">Creative Voice</span>
+              </div>
+              <p class="hobby-desc">
+                Exploring vocal resonance, lyrical emotions, and melodies. A joyful form of authentic self-expression that connects culture, lyricism, and artistic freedom.
+              </p>
+              <div class="hobby-skills-row">
+                <span class="h-chip">Vocal Resonance</span>
+                <span class="h-chip">Lyrical Storytelling</span>
+                <span class="h-chip">Self-Expression</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobby 4: Curiosity -->
+          <div class="hobby-card curiosity-highlight">
+            <div class="hobby-icon-box curiosity-gradient">
+              <i data-lucide="compass"></i>
+            </div>
+            <div class="hobby-body">
+              <div class="hobby-header-row">
+                <h4 class="hobby-name">Curiosity & Human Behaviour</h4>
+                <span class="hobby-tag core-driver">Lifelong Driver</span>
+              </div>
+              <p class="hobby-desc">
+                An insatiable drive to explore the human psyche: <em>why we think, feel, connect, love, and heal</em>. Constantly asking questions beyond textbooks, bridging curiosity with clinical empirical evidence.
+              </p>
+              <div class="hobby-skills-row">
+                <span class="h-chip gold-chip">From Curiosity to Evidence</span>
+                <span class="h-chip">Inquiry-Based Learning</span>
+                <span class="h-chip">Neuropsychology</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- macOS Frosted Glass Dock (Inspiration Image 2 Style) -->
+  <nav class="macos-dock" id="macosDock">
+    <div class="dock-shelf">
+      <!-- 1: Finder / Desktop Toggle -->
+      <div class="dock-item" data-action="minimize-all" title="Show Desktop / Minimize Windows">
+        <div class="dock-icon-wrapper dock-finder">
+          <i data-lucide="layout-grid"></i>
+        </div>
+        <span class="dock-tooltip">Desktop</span>
+        <span class="dock-dot"></span>
+      </div>
+
+      <!-- 2: Notes / About Me -->
+      <div class="dock-item" data-action="about" title="About Yelliz Yuthika">
+        <div class="dock-icon-wrapper dock-notes">
+          <i data-lucide="user"></i>
+        </div>
+        <span class="dock-tooltip">About Me</span>
+        <span class="dock-dot" id="dot-about"></span>
+      </div>
+
+      <!-- 2b: Experience -->
+      <div class="dock-item" data-action="experience" title="Experience & Roles">
+        <div class="dock-icon-wrapper dock-experience">
+          <i data-lucide="briefcase"></i>
+        </div>
+        <span class="dock-tooltip">Experience</span>
+        <span class="dock-dot" id="dot-experience"></span>
+      </div>
+
+      <!-- 3: Education -->
+      <div class="dock-item" data-action="education" title="Education & Academics">
+        <div class="dock-icon-wrapper dock-education">
+          <i data-lucide="graduation-cap"></i>
+        </div>
+        <span class="dock-tooltip">Education</span>
+        <span class="dock-dot" id="dot-education"></span>
+      </div>
+
+      <!-- 3b: Services & Events -->
+      <div class="dock-item" data-action="events" title="Services, Events & Fieldwork">
+        <div class="dock-icon-wrapper dock-events">
+          <i data-lucide="sparkles"></i>
+        </div>
+        <span class="dock-tooltip">Services & Events</span>
+        <span class="dock-dot" id="dot-events"></span>
+      </div>
+
+      <!-- 4: Certifications Highlight Icon -->
+      <div class="dock-item dock-item-highlight" data-action="certifications" title="Licenses & Certifications">
+        <div class="dock-icon-wrapper dock-speaker-icon">
+          <img src="assets/linkedin_avatar.jpg" alt="Yuthika Portrait" class="dock-custom-img">
+        </div>
+        <span class="dock-tooltip">Certificates & Awards</span>
+        <span class="dock-dot active" id="dot-certifications"></span>
+      </div>
+
+      <!-- 4b: Skills & Endorsements -->
+      <div class="dock-item" data-action="skills" title="Skills & Endorsements">
+        <div class="dock-icon-wrapper dock-skills">
+          <i data-lucide="check-check"></i>
+        </div>
+        <span class="dock-tooltip">Skills & Endorsements</span>
+        <span class="dock-dot" id="dot-skills"></span>
+      </div>
+
+      <!-- 4c: Hobbies & Passions -->
+      <div class="dock-item" data-action="hobbies" title="Hobbies & Passions">
+        <div class="dock-icon-wrapper dock-hobbies">
+          <i data-lucide="heart"></i>
+        </div>
+        <span class="dock-tooltip">Hobbies & Passions</span>
+        <span class="dock-dot" id="dot-hobbies"></span>
+      </div>
+
+      <!-- 5: Rotary / Leadership -->
+      <div class="dock-item" data-action="leadership" title="Rotary & TEJAS RYLA">
+        <div class="dock-icon-wrapper dock-rotary">
+          <i data-lucide="award"></i>
+        </div>
+        <span class="dock-tooltip">District 2982 & RYLA</span>
+        <span class="dock-dot" id="dot-leadership"></span>
+      </div>
+
+      <!-- 6: Camera / Gallery -->
+      <div class="dock-item" data-action="gallery" title="Stage Photos & Moments">
+        <div class="dock-icon-wrapper dock-camera">
+          <i data-lucide="camera"></i>
+        </div>
+        <span class="dock-tooltip">Gallery</span>
+        <span class="dock-dot" id="dot-gallery"></span>
+      </div>
+
+      <!-- 7: Instagram -->
+      <div class="dock-item" data-action="instagram" title="Instagram @palapathraonandi">
+        <div class="dock-icon-wrapper dock-instagram">
+          <i data-lucide="instagram"></i>
+        </div>
+        <span class="dock-tooltip">Instagram</span>
+      </div>
+
+      <!-- 8: LinkedIn -->
+      <div class="dock-item" data-action="linkedin" title="LinkedIn Profile">
+        <div class="dock-icon-wrapper dock-linkedin">
+          <i data-lucide="linkedin"></i>
+        </div>
+        <span class="dock-tooltip">LinkedIn</span>
+      </div>
+
+      <!-- 9: Mail / Contact -->
+      <div class="dock-item" data-action="contact" title="Get in Touch">
+        <div class="dock-icon-wrapper dock-mail">
+          <i data-lucide="mail"></i>
+        </div>
+        <span class="dock-tooltip">Contact</span>
+        <span class="dock-dot" id="dot-contact"></span>
+      </div>
+
+      <!-- Separator line -->
+      <div class="dock-separator"></div>
+
+      <!-- 10: Direct Phone Call -->
+      <a href="tel:+918667407733" class="dock-item" title="Call +91 8667407733">
+        <div class="dock-icon-wrapper dock-phone">
+          <i data-lucide="phone"></i>
+        </div>
+        <span class="dock-tooltip">Call +91 8667407733</span>
+      </a>
+
+      <!-- 11: Reset Layout -->
+      <div class="dock-item" data-action="reset-layout" title="Reset Desktop Layout">
+        <div class="dock-icon-wrapper dock-settings">
+          <i data-lucide="refresh-cw"></i>
+        </div>
+        <span class="dock-tooltip">Reset Layout</span>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Image Zoom Modal -->
+  <div class="image-zoom-modal" id="imageZoomModal" onclick="closeZoomModal()">
+    <div class="zoom-content-box" onclick="event.stopPropagation()">
+      <button class="zoom-close-btn" onclick="closeZoomModal()">&times;</button>
+      <img src="" alt="Enlarged preview" id="zoomedImg">
+      <div class="zoom-caption" id="zoomCaption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Pill -->
+  <div class="toast-notification" id="toastNotification">
+    <i data-lucide="check-circle" class="toast-icon"></i>
+    <span class="toast-text" id="toastText">Action completed</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
