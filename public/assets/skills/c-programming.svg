@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+<rect width="600" height="300" rx="18" fill="#0d0d10"/>
+<rect x="6" y="6" width="588" height="288" rx="14" fill="#16161b" stroke="#2c2c33" stroke-width="2"/>
+<g transform="translate(240.0,60) scale(5.000)"><path d="M16.5921 9.1962s-.354-3.298-3.627-3.39c-3.2741-.09-4.9552 2.474-4.9552 6.14 0 3.6651 1.858 6.5972 5.0451 6.5972 3.184 0 3.5381-3.665 3.5381-3.665l6.1041.365s.36 3.31-2.196 5.836c-2.552 2.5241-5.6901 2.9371-7.8762 2.9201-2.19-.017-5.2261.034-8.1602-2.97-2.938-3.0101-3.436-5.9302-3.436-8.8002 0-2.8701.556-6.6702 4.047-9.5502C7.444.72 9.849 0 12.254 0c10.0422 0 10.7172 9.2602 10.7172 9.2602z" fill="#f2f2f4"/></g>
+<text x="300" y="220" font-size="24" font-weight="700" fill="#f2f2f4" text-anchor="middle" font-family="Arial, sans-serif">C Programming</text>
+<text x="300" y="250" font-size="14" fill="#8a8a94" text-anchor="middle" font-family="Arial, sans-serif">Data &amp; Computing Foundations</text>
+</svg>

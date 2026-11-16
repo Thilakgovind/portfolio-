@@ -1,0 +1,686 @@
+[
+  {
+    "name": "Team Leadership",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/team-leadership.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Team Coordination",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/team-coordination.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Marketing Strategy",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/marketing-strategy.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Community Management",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/community-management.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Event Promotion",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/event-promotion.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Human Resource Coordination",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/human-resource-coordination.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Publicity and Outreach",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/publicity-and-outreach.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Stakeholder Communication",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/stakeholder-communication.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Team Collaboration",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/team-collaboration.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Project Coordination",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/project-coordination.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Event Organisation",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/event-organisation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Hackathon Team Management",
+    "category": "Leadership & Management",
+    "image": "/assets/skills/hackathon-team-management.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Public Speaking",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/public-speaking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Technical Communication",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/technical-communication.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Presentation Skills",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/presentation-skills.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Debate",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/debate.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Problem-Solving",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/problem-solving.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Critical Thinking",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/critical-thinking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Creative Thinking",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/creative-thinking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Research Communication",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/research-communication.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Networking",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/networking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Time Management",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/time-management.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Adaptability",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/adaptability.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Collaboration",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/collaboration.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Debate and Presentation Activities",
+    "category": "Communication & Professional Practice",
+    "image": "/assets/skills/debate-and-presentation-activities.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "ESP32 Microcontroller",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/esp32-microcontroller.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Sensor Interfacing",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/sensor-interfacing.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "IoT System Fundamentals",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/iot-system-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Hardware-Software Integration",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/hardware-software-integration.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Hardware Prototyping",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/hardware-prototyping.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Basic PCB Design using EasyEDA",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/basic-pcb-design-using-easyeda.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Solar PV Systems",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/solar-pv-systems.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Battery Energy Systems",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/battery-energy-systems.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Energy Monitoring Concepts",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/energy-monitoring-concepts.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Arduino Fundamentals",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/arduino-fundamentals.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Embedded Systems Fundamentals",
+    "category": "Embedded Systems, IoT & Energy",
+    "image": "/assets/skills/embedded-systems-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "JavaScript",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/javascript.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "HTML and CSS",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/html-and-css.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "React and Vite",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/react-and-vite.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "FastAPI",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/fastapi.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Generative AI",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/generative-ai.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Prompt Engineering",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/prompt-engineering.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "AI API Integration",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/ai-api-integration.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "AI Agent Development",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/ai-agent-development.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Git and GitHub",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/git-and-github.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Docker",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/docker.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Firebase and Supabase",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/firebase-and-supabase.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Streamlit",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/streamlit.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "n8n Automation",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/n8n-automation.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Ollama and Local LLM Exploration",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/ollama-and-local-llm-exploration.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Godot 4",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/godot-4.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Product Ideation",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/product-ideation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Problem-Solution Mapping",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/problem-solution-mapping.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "UI/UX Fundamentals",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/ui-ux-fundamentals.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Prototyping",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/prototyping.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "User-Centred Design",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/user-centred-design.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Application Development",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/application-development.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Product Thinking",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/product-thinking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Design Thinking",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/design-thinking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Technical Project Planning",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/technical-project-planning.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Solution Architecture Fundamentals",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/solution-architecture-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Innovation and Ideation",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/innovation-and-ideation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Technical Presentation",
+    "category": "Software, AI & Product Building",
+    "image": "/assets/skills/technical-presentation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Hybrid Electric Drive Systems",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/hybrid-electric-drive-systems.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Electric Vehicle Technology",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/electric-vehicle-technology.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Embedded Electronics",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/embedded-electronics.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "AI in Electronics",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/ai-in-electronics.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "On-Device AI Concepts",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/on-device-ai-concepts.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Edge Computing Fundamentals",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/edge-computing-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Semiconductor and VLSI Fundamentals",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/semiconductor-and-vlsi-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "AI-powered Game Development",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/ai-powered-game-development.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Voice AI Fundamentals",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/voice-ai-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Cybersecurity Fundamentals",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/cybersecurity-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Ethical Hacking Awareness",
+    "category": "Workshops & Industry Exposure",
+    "image": "/assets/skills/ethical-hacking-awareness.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "RESOLVE '26 Game Jam",
+    "category": "Technical Activities",
+    "image": "/assets/skills/resolve-26-game-jam.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "HackSprint at MAHE Bengaluru",
+    "category": "Technical Activities",
+    "image": "/assets/skills/hacksprint-at-mahe-bengaluru.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Hackathon Participation",
+    "category": "Technical Activities",
+    "image": "/assets/skills/hackathon-participation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Undergraduate Research (UROP)",
+    "category": "Technical Activities",
+    "image": "/assets/skills/undergraduate-research-urop.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "IEEE Computer Society Membership",
+    "category": "Technical Activities",
+    "image": "/assets/skills/ieee-computer-society-membership.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Electronics and Embedded-Systems Research",
+    "category": "Technical Activities",
+    "image": "/assets/skills/electronics-and-embedded-systems-research.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Technical Workshops and Developer Events",
+    "category": "Technical Activities",
+    "image": "/assets/skills/technical-workshops-and-developer-events.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Hybrid Electric Drive Workshop",
+    "category": "Technical Activities",
+    "image": "/assets/skills/hybrid-electric-drive-workshop.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Generative AI Workshops and Hackathons",
+    "category": "Technical Activities",
+    "image": "/assets/skills/generative-ai-workshops-and-hackathons.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Electronic Circuit Analysis",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/electronic-circuit-analysis.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Analog Electronics",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/analog-electronics.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Digital Electronics",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/digital-electronics.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Digital Logic Design",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/digital-logic-design.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Semiconductor Devices",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/semiconductor-devices.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "MOSFET and BJT Fundamentals",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/mosfet-and-bjt-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Electronic Measurements",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/electronic-measurements.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Circuit Design & Analysis",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/circuit-design-analysis.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Electronic Component Identification",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/electronic-component-identification.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Signal Models and Amplifier Fundamentals",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/signal-models-and-amplifier-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Computer Organization & Architecture",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/computer-organization-architecture.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Electromagnetic Theory",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/electromagnetic-theory.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Transformers and Electrical Fundamentals",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/transformers-and-electrical-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Boundary Value Problems",
+    "category": "Electronics & Communication Engineering",
+    "image": "/assets/skills/boundary-value-problems.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "C Programming",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/c-programming.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "C++ Fundamentals",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/c-fundamentals.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Python Programming",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/python-programming.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "SQL",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/sql.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "NumPy and Matplotlib",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/numpy-and-matplotlib.svg",
+    "imageType": "brand logo"
+  },
+  {
+    "name": "Data Analysis",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/data-analysis.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Machine Learning Fundamentals",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/machine-learning-fundamentals.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Analytical Thinking",
+    "category": "Data & Computing Foundations",
+    "image": "/assets/skills/analytical-thinking.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Technical Research",
+    "category": "Research Methods",
+    "image": "/assets/skills/technical-research.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Literature Review",
+    "category": "Research Methods",
+    "image": "/assets/skills/literature-review.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Research Documentation",
+    "category": "Research Methods",
+    "image": "/assets/skills/research-documentation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Research Paper Preparation",
+    "category": "Research Methods",
+    "image": "/assets/skills/research-paper-preparation.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Problem Identification",
+    "category": "Research Methods",
+    "image": "/assets/skills/problem-identification.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Research Gap Identification",
+    "category": "Research Methods",
+    "image": "/assets/skills/research-gap-identification.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Technical Feasibility Analysis",
+    "category": "Research Methods",
+    "image": "/assets/skills/technical-feasibility-analysis.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Survey Design and Data Collection",
+    "category": "Research Methods",
+    "image": "/assets/skills/survey-design-and-data-collection.svg",
+    "imageType": "icon (Lucide)"
+  },
+  {
+    "name": "Solar Energy Research",
+    "category": "Research Methods",
+    "image": "/assets/skills/solar-energy-research.svg",
+    "imageType": "icon (Lucide)"
+  }
+]

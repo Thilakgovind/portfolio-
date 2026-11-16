@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+<rect width="600" height="300" rx="18" fill="#0d0d10"/>
+<rect x="6" y="6" width="588" height="288" rx="14" fill="#16161b" stroke="#2c2c33" stroke-width="2"/>
+<g transform="translate(240.0,60) scale(5.000)"><path d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896" fill="#f2f2f4"/></g>
+<text x="300" y="220" font-size="24" font-weight="700" fill="#f2f2f4" text-anchor="middle" font-family="Arial, sans-serif">FastAPI</text>
+<text x="300" y="250" font-size="14" fill="#8a8a94" text-anchor="middle" font-family="Arial, sans-serif">Software, AI &amp; Product Building</text>
+</svg>

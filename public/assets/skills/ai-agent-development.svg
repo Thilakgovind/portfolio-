@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+<rect width="600" height="300" rx="18" fill="#0d0d10"/>
+<rect x="6" y="6" width="588" height="288" rx="14" fill="#16161b" stroke="#2c2c33" stroke-width="2"/>
+<g transform="translate(240,50) scale(5)" fill="none" stroke="#f4f1ec" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 8V4H8" />
+  <rect width="16" height="12" x="4" y="8" rx="2" />
+  <path d="M2 14h2" />
+  <path d="M20 14h2" />
+  <path d="M15 13v2" />
+  <path d="M9 13v2" />
+</g>
+<text x="300" y="220" font-size="24" font-weight="700" fill="#f2f2f4" text-anchor="middle" font-family="Arial, sans-serif">AI Agent Development</text>
+<text x="300" y="250" font-size="14" fill="#8a8a94" text-anchor="middle" font-family="Arial, sans-serif">Software, AI &amp; Product Building</text>
+</svg>
