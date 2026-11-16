@@ -1,10 +1,11 @@
 import { useRef } from 'react';
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { achievements, certifications, education, profile, projects, type ProfileId } from '../data/portfolio';
+import { certifications, education, profile, projects, type ProfileId } from '../data/portfolio';
 import { useFinePointer } from '../hooks/useMedia';
 import { useSmoothScroll } from '../hooks/smoothScroll';
 import { EASE, Magnetic, Particles } from './fx';
 import { SeriesMark } from './Poster';
+import source from '../data/portfolio-data.json';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.25 } } };
 const item = {
@@ -37,16 +38,18 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
   const glowX = useTransform(px, [-1, 1], ['-6%', '6%']);
 
   const meta = [
-    education[0].period.split(' – ')[0].split(' ')[1] + ' – Present',
-    'B.Tech AI & ML',
+    education[0].period,
+    'B.Tech ECE (Data Science)',
     `${projects.length} Originals`,
     `${certifications.length} Certifications`,
   ];
 
-  const floating = [
-    { text: education[0].score, sub: 'B.Tech AI & ML', pos: 'left-[2%] top-[30%]', depth: 1 },
-    { text: `${achievements[0].title}`, sub: achievements[0].org, pos: 'right-[0%] top-[18%]', depth: -1 },
-    { text: 'Java · React · Node.js', sub: 'Primary stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+  const floating: Array<{text: string; sub: string; pos: string; depth: number; image?: string}> = [
+    { text: education[0].score, sub: 'B.Tech ECE (Data Science)', pos: 'left-[2%] top-[17%] md:top-[30%]', depth: 1, image: source.media.srm_logo },
+    { text: 'Marketing Team Lead', sub: 'AI Geeks Chennai', pos: 'right-[1%] top-[3%] md:right-[0%] md:top-[18%]', depth: -1, image: source.media.ai_geeks_logo },
+    { text: 'Junior HR Intern', sub: 'InAmigos Foundation', pos: 'right-[1%] top-[21%] md:right-[0%] md:top-[34%]', depth: 0.6, image: source.media.inamigos_logo },
+    { text: 'Campus Ambassador', sub: 'The ePlane Company', pos: 'right-[1%] top-[39%] md:right-[0%] md:top-[50%]', depth: -0.6, image: source.media.eplane_logo },
+    { text: 'Corporate Crew', sub: 'FAST', pos: 'right-[1%] top-[57%] md:right-[0%] md:top-[66%]', depth: 0.5, image: source.media.fast_logo },
   ];
 
   return (
@@ -61,6 +64,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
       }}
     >
       {/* atmosphere */}
+      <div aria-hidden className="absolute inset-0 bg-[url('/assets/thilak-cdc50.png')] bg-cover bg-center opacity-[0.16] blur-[2px]" />
       <motion.div aria-hidden className="absolute inset-0" style={{ x: glowX }}>
         <div className="absolute right-[-10%] top-[-10%] h-[90vh] w-[80vw] rounded-full bg-[radial-gradient(closest-side,rgba(229,19,43,0.38),rgba(229,19,43,0.08)_55%,transparent)] blur-2xl lg:right-[-4%] lg:w-[60vw]" />
         <div className="absolute bottom-[-20%] left-[-10%] h-[70vh] w-[60vw] rounded-full bg-[radial-gradient(closest-side,rgba(90,20,120,0.25),transparent)] blur-2xl" />
@@ -128,7 +132,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
         </motion.p>
 
         <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-mist">
-          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-bone">AI·ML</span>
+          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-bone">ECE·DS</span>
           {meta.map((m, i) => (
             <span key={m} className="flex items-center gap-3">
               {i > 0 && <span className="h-1 w-1 rounded-full bg-smoke" />}
@@ -164,7 +168,7 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
             ) : (
               <button
                 type="button"
-                onClick={() => scrollTo('#originals')}
+                onClick={() => scrollTo('#picks')}
                 className="glass flex min-h-12 items-center gap-3 rounded-md px-6 py-3 text-[15px] font-semibold text-bone transition hover:bg-white/15 sm:px-8"
               >
                 <span className="text-xl leading-none">＋</span> My Work
@@ -189,20 +193,20 @@ export default function Hero({ onPlay, onResume, profileId }: { onPlay: () => vo
 
 type MV = ReturnType<typeof useTransform<number, number>>;
 
-function FloatChip({ text, sub, pos, depth, index, mx, my }: { text: string; sub: string; pos: string; depth: number; index: number; mx: MV; my: MV }) {
+function FloatChip({ text, sub, pos, depth, index, mx, my, image }: { text: string; sub: string; pos: string; depth: number; index: number; mx: MV; my: MV; image?: string }) {
   const x = useTransform(mx, (n: number) => n * depth);
   const y = useTransform(my, (n: number) => n * depth);
   return (
     <motion.div
-      className={`glass absolute hidden rounded-xl px-4 py-2.5 md:block ${pos}`}
+      className={`glass absolute max-w-[43vw] rounded-xl px-2 py-1.5 md:max-w-none md:px-4 md:py-2.5 ${pos}`}
       style={{ x, y }}
       initial={{ opacity: 0, filter: 'blur(6px)' }}
       animate={{ opacity: 1, filter: 'blur(0px)' }}
       transition={{ duration: 0.9, delay: 1.2 + index * 0.18, ease: EASE }}
     >
-      <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 5 + index, repeat: Infinity, ease: 'easeInOut' }}>
-        <p className="text-sm font-semibold text-bone">{text}</p>
-        <p className="text-[10px] uppercase tracking-[0.2em] text-mist">{sub}</p>
+      <motion.div className="flex items-center gap-1.5 md:gap-2" animate={{ y: [0, -6, 0] }} transition={{ duration: 5 + index, repeat: Infinity, ease: 'easeInOut' }}>
+        {image && <img src={image} alt="" className="h-6 w-7 shrink-0 rounded bg-white p-0.5 object-contain md:h-9 md:w-11" />}
+        <div><p className="text-[10px] font-semibold leading-tight text-bone md:text-sm">{text}</p><p className="mt-0.5 text-[8px] uppercase leading-tight tracking-[0.04em] text-mist md:text-[10px] md:tracking-[0.12em]">{sub}</p></div>
       </motion.div>
     </motion.div>
   );

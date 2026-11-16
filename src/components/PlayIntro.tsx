@@ -3,9 +3,10 @@ import { AnimatePresence, motion, useMotionValue } from 'framer-motion';
 import { introSlides, profile } from '../data/portfolio';
 import { useScrollLock } from '../hooks/smoothScroll';
 import { useReducedMotionPref } from '../hooks/useMedia';
+import { readVoiceMuted, VOICE_VOLUME, writeVoiceMuted } from '../hooks/voicePreference';
 import { EASE } from './fx';
 
-const SLIDE_MS = 3600;
+const SLIDE_MS = 7000;
 
 /**
  * "▶ Play Intro": darken → zoom into the portrait → a full-screen highlight reel
@@ -17,7 +18,30 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
   const [phase, setPhase] = useState<'zoom' | 'reel' | 'end'>(reduced ? 'reel' : 'zoom');
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [voiceEnabled, setVoiceEnabled] = useState(() => !readVoiceMuted());
   const progress = useMotionValue(0);
+
+  useEffect(() => {
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    if (phase !== 'reel' || !voiceEnabled) return;
+    const utterance = new SpeechSynthesisUtterance(introSlides[index].narration);
+    const voices = window.speechSynthesis.getVoices();
+    utterance.voice = voices.find(v => v.lang.toLowerCase().startsWith('en-in')) ?? voices.find(v => v.lang.toLowerCase().startsWith('en')) ?? null;
+    utterance.lang = utterance.voice?.lang ?? 'en-IN';
+    utterance.rate = 0.94;
+    utterance.pitch = 0.9;
+    utterance.volume = VOICE_VOLUME;
+    window.speechSynthesis.speak(utterance);
+    if (paused) window.speechSynthesis.pause();
+    return () => window.speechSynthesis.cancel();
+  }, [phase, index, voiceEnabled]);
+
+  useEffect(() => {
+    if (!('speechSynthesis' in window) || !voiceEnabled) return;
+    if (paused) window.speechSynthesis.pause();
+    else window.speechSynthesis.resume();
+  }, [paused, voiceEnabled]);
 
   useEffect(() => {
     if (phase !== 'zoom') return;
@@ -109,6 +133,10 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
         />
       </motion.div>
       <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(120,10,25,0.35),transparent_70%)]" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-30 [background-image:repeating-linear-gradient(0deg,transparent_0px,transparent_3px,rgba(255,255,255,0.05)_4px)]" />
+      <motion.div aria-hidden className="pointer-events-none absolute inset-y-0 z-[2] w-[1px] bg-crimson-2 shadow-[0_0_40px_12px_rgba(229,19,43,0.2)]" initial={{ left: '-5%', opacity: 0 }} animate={{ left: phase === 'zoom' ? '105%' : '50%', opacity: phase === 'zoom' ? [0, 1, 0] : 0 }} transition={{ duration: 1.7, ease: EASE }} />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-[8vh] bg-gradient-to-b from-black to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[8vh] bg-gradient-to-t from-black to-transparent" />
 
       {/* progress bars */}
       {phase !== 'zoom' && (
@@ -130,7 +158,7 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
           {phase === 'reel' && (
             <motion.div
               key={index}
-              className="max-w-4xl"
+              className="relative max-w-4xl border-l border-crimson-2/60 pl-5 sm:pl-10"
               initial={{ opacity: 0, scale: 1.06, filter: 'blur(14px)' }}
               animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
               exit={{ opacity: 0, scale: 0.96, filter: 'blur(10px)' }}
@@ -202,6 +230,9 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
               {paused ? '▶' : '❚❚'}
             </button>
           )}
+          <button type="button" onClick={() => { const next = !voiceEnabled; setVoiceEnabled(next); writeVoiceMuted(!next); }} aria-label={voiceEnabled ? 'Mute narration' : 'Enable narration'} aria-pressed={voiceEnabled} className="flex h-11 min-w-11 items-center justify-center rounded-full border border-white/25 px-3 text-xs font-bold text-bone transition hover:bg-white/10">
+            {voiceEnabled ? 'VOICE ON' : 'VOICE OFF'}
+          </button>
           <span className="hidden text-[11px] tracking-[0.2em] text-smoke sm:block">SPACE · ← → · ESC</span>
         </div>
         <button

@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { profile, viewerProfiles, type ProfileId } from '../data/portfolio';
 import { EASE } from './fx';
+import { ThilluSprite } from './Thillu';
+import source from '../data/portfolio-data.json';
 
 export function ProfileAvatar({ id, size = 'lg' }: { id: ProfileId; size?: 'sm' | 'lg' }) {
   const p = viewerProfiles.find((v) => v.id === id)!;
@@ -9,17 +11,17 @@ export function ProfileAvatar({ id, size = 'lg' }: { id: ProfileId; size?: 'sm' 
   if (id === 'sushmita') {
     return (
       <span className={`relative block overflow-hidden ${box}`} style={{ background: 'radial-gradient(circle at 50% 30%, #7a0f24, #1a0509)' }}>
-        <img src="/assets/portrait-420.webp" alt="" className="absolute inset-x-0 bottom-0 mx-auto h-[115%] w-auto max-w-none -translate-x-[3%] object-cover object-top" />
+        <ThilluSprite pose="stand" className="absolute inset-0 h-full w-full" />
       </span>
     );
   }
-  const glyph = { recruiter: 'R', developer: '</>', creative: '✦' }[id];
+  const art = { recruiter: source.media.recruiter_avatar, developer: source.media.developer_avatar, creative: source.media.creative_avatar }[id];
   return (
     <span
       className={`relative flex items-center justify-center overflow-hidden font-display text-bone ${box}`}
       style={{ background: `linear-gradient(145deg, ${p.color}, #0b0b10 120%)` }}
     >
-      <span className={size === 'lg' ? 'text-4xl sm:text-5xl' : 'text-sm'}>{glyph}</span>
+      <img src={art} alt="" className={`absolute inset-0 h-full w-full ${id === 'developer' ? 'bg-white object-contain' : 'object-cover'}`} />
     </span>
   );
 }
@@ -74,7 +76,7 @@ export default function ProfileSelector({ onPick }: { onPick: (id: ProfileId) =>
         ))}
       </motion.ul>
       <p className="relative mt-12 max-w-md text-center text-xs leading-relaxed text-smoke">
-        Every profile watches the same true story of {profile.displayName} — it only changes what plays first.
+        Every profile explores the same work by {profile.displayName} — it only changes what appears first.
       </p>
     </motion.div>
   );

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { profile } from '../data/portfolio';
+import { introSlides, profile } from '../data/portfolio';
 import { useReducedMotionPref } from '../hooks/useMedia';
 import { EASE, Magnetic } from './fx';
 
 /**
  * The signature moment:
- * black → studio card → SUSHMITA → THE SERIES → portrait reveal → role → ▶ PLAY
+ * black → studio card → Thilak Govind → series title → portrait → interests → play
  */
 const TIMELINE = [
   { at: 300, beat: 1 }, // studio card
@@ -20,6 +20,7 @@ const TIMELINE = [
 export default function OpeningSequence({ onDone }: { onDone: () => void }) {
   const reduced = useReducedMotionPref();
   const [beat, setBeat] = useState(reduced ? 6 : 0);
+  const introInterests = introSlides[1].chips?.join('  •  ') ?? profile.tagline.join('  •  ');
 
   useEffect(() => {
     if (reduced) return;
@@ -100,14 +101,15 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
 
       {/* title */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
+        <motion.div aria-hidden className="mb-5 h-[2px] bg-crimson-2 shadow-[0_0_22px_4px_rgba(229,19,43,0.55)]" initial={{ width: 0, opacity: 0 }} animate={beat >= 2 ? { width: 'min(46vw, 360px)', opacity: 1 } : {}} transition={{ duration: 0.9, ease: EASE }} />
         <motion.h1
           className="font-display leading-[0.82] text-bone drop-shadow-[0_8px_40px_rgba(0,0,0,0.8)]"
-          style={{ fontSize: 'clamp(4.6rem, 20vw, 15rem)' }}
+          style={{ fontSize: 'clamp(3.2rem, 13vw, 11rem)', textShadow: '3px 0 rgba(229,19,43,0.5), -2px 0 rgba(50,120,180,0.18)' }}
           initial={{ opacity: 0, scale: 1.3, filter: 'blur(20px)', letterSpacing: '0.5em' }}
           animate={beat >= 2 ? { opacity: 1, scale: 1, filter: 'blur(0px)', letterSpacing: '0.04em', y: beat >= 4 ? '-30vh' : 0 } : {}}
           transition={{ duration: 1.3, ease: EASE }}
         >
-          {profile.firstName}
+          {profile.displayName.toUpperCase()}
         </motion.h1>
         <motion.p
           className="font-sans text-sm font-bold text-crimson-2 [text-shadow:0_2px_20px_rgba(0,0,0,0.9)] sm:text-lg"
@@ -127,7 +129,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
           animate={beat >= 5 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: EASE }}
         >
-          {profile.tagline.join('  •  ')}
+          {introInterests}
         </motion.p>
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={beat >= 6 ? { opacity: 1, scale: 1 } : {}} transition={{ duration: 0.7, ease: EASE }}>
           <Magnetic>

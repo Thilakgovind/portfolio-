@@ -1,0 +1,564 @@
+{
+  "_readme": "Portfolio data for Thilak Govind S S. Each section is a lane on the truck road. Fields: title, date, description, link, image, status. image is empty until you upload it. status 'check' means confirm before publishing. status 'ok' means confirmed. Empty string means unknown.",
+  "media": {
+    "thillu_atlas": "/assets/avatar/thillu-atlas.png",
+    "srm_logo": "/assets/brands/srm-logo.png",
+    "inamigos_logo": "/assets/organizations/inamigos-logo.png",
+    "junior_hr": "/assets/organizations/junior-hr.png",
+    "ai_geeks_logo": "/assets/organizations/ai-geeks-logo.png",
+    "eplane_logo": "/assets/organizations/eplane.png",
+    "fast_logo": "/assets/organizations/fast.png",
+    "recruiter_avatar": "/assets/profiles/recruiter.png",
+    "developer_avatar": "/assets/profiles/developer.png",
+    "creative_avatar": "/assets/profiles/creative.png",
+    "thilak_expression": "/assets/profiles/thilak-expression.png",
+    "featured_reason": "/assets/featured/everything-happens.png",
+    "ece_buildings": "/assets/ece-buildings.png",
+    "srm_hackathon_club_logo": "/assets/organizations/srm-hackathon-club.png",
+    "ieee_image": "/assets/organizations/ieee.png",
+    "ieee_computer_society_logo": "/assets/organizations/ieee-computer-society.png",
+    "about_selfie": "/assets/thilak-about-selfie.png",
+    "madhavaram_bus_terminus": "/assets/madhavaram-bus-terminus.png",
+    "madhavaram_milk_bottle": "/assets/madhavaram-milk-bottle.png",
+    "madhavaram_church": "/assets/madhavaram-st-sebastians.png",
+    "madhavaram_map": "/assets/madhavaram-map.png"
+  },
+
+  "profile": {
+    "name": "Thilak Govind S S",
+    "headline": "AI Product Builder | Software Developer | Python Developer",
+    "education": "B.Tech ECE (Data Science), SRM Institute of Science and Technology, Kattankulathur, Chennai, 2025-2029, CGPA 8.63/10",
+    "location": "Madhavaram, Chennai, Tamil Nadu, India",
+    "home_address": "RC Mehta's Green Park Apartments, Milk Colony Road, Mangalapuram, Madhavaram, Chennai, Tamil Nadu 600051",
+    "home_share_url": "https://share.google/IfocBbqRUxX15PsyP",
+    "home_map_url": "https://www.google.com/maps/search/?api=1&query=RC%20Mehta%27s%20Green%20Park%20Apartments%2C%20Milk%20Colony%20Road%2C%20Madhavaram%2C%20Chennai",
+    "summary": "Electronics and Communication Engineering (Data Science) student building practical AI and software applications. Turns problems into working prototypes through hackathons, game jams and project work. Comfortable leading small teams and learning new tools quickly.",
+    "about_quote": "Curiosity starts quietly: a circuit to understand, a problem someone lives with, a question no one has answered yet. I follow it through code, conversation and prototypes until an idea finds its place in the real world.",
+    "interests": ["AI agents", "Python", "Product development", "Electronics", "Embedded systems", "IoT", "Solar energy", "Research", "Game development", "Community building"],
+    "languages": ["Tamil (Proficient)", "English (Proficient)", "Hindi (Fluent)", "French (Learning)"],
+    "image": "",
+    "status": "ok"
+  },
+
+  "contact": {
+    "email": "redemption23to25@gmail.com",
+    "phone": "",
+    "phone_public": false,
+    "linkedin": "https://linkedin.com/in/thilak-govind-442501423",
+    "github": "https://github.com/Thilakgovind",
+    "portfolio_repo": "https://github.com/Thilakgovind/portfolio-",
+    "instagram": "https://www.instagram.com/becoming_thilakg02?utm_source=qr",
+    "x": "https://x.com/thilakgovind",
+    "status": "ok"
+  },
+
+  "lanes": {
+    "hackathons": [
+      {
+        "id": "hacksprint-2026",
+        "special": "bengaluru",
+        "title": "HackSprint 2026",
+        "date": "2026-10-17 to 2026-10-18",
+        "location": "Manipal Academy of Higher Education (MAHE), Bengaluru",
+        "organiser": "Commudle Developer Network",
+        "format": "24-hour buildathon",
+        "result": "Top 12 finalists",
+        "result_note": "User confirmed Top 12 out of 5,000 participants; the LinkedIn post separately cites 700+ teams in the first round.",
+        "team": ["Thilak Govind S S", "Shaan G S", "Josiah Arun"],
+        "team_name": "Quantum Forge",
+        "project": "Personal Admin OS for Kirana Stores",
+        "description": "Top 12 out of 5,000 participants. Voice-first money planner for kirana store owners, powered by Sarvam AI.",
+        "features": [
+          "Supplier bill intelligence",
+          "Credit tracking",
+          "Cash-flow alerts",
+          "Loan assistance: scheme lookup and bank document guidance"
+        ],
+        "my_part": "",
+        "my_part_note": "Thilak to confirm his individual contribution (for example: Sarvam voice flow, credit tracking).",
+        "journey": "700+ teams, 60 shortlisted, 40 into mentorship, 12 pitched at MAHE",
+        "link": "https://lnkd.in/gb_Jn9HW",
+        "image": "/assets/hacksprint-bengaluru.png",
+        "status": "check"
+      },
+      {
+        "id": "geniexhub-project-eclipse-neerwatch",
+        "title": "GenieXHub Project Eclipse — NeerWatch",
+        "date": "",
+        "location": "",
+        "organiser": "GenieXHub",
+        "format": "AI and automation hackathon",
+        "result": "Top 30 of 5,000",
+        "project": "NeerWatch",
+        "description": "Qualified among the top 30 of 5,000 participants with NeerWatch, a Northeast India water-quality monitoring prototype. The dashboard maps 44 historical station records across eight states and supports field-verification logging. Predictive risk scores and SHAP explanations are proposed work, not live outputs in the current API.",
+        "link": "https://github.com/palanisamyshanmugan-ship-it/NeerWatch",
+        "image": "/assets/geniexhub-project-eclipse.png",
+        "poster_style": "contain",
+        "status": "check"
+      },
+      {
+        "id": "resolve-26-game-jam",
+        "special": "game-jam",
+        "title": "RESOLVE '26 National-Level Game Jam",
+        "date": "2026-08-31 to 2026-09-01",
+        "location": "SRM Institute of Science and Technology, Vadapalani Campus, Chennai",
+        "organiser": "Developer Network Space (DNS) Club",
+        "result": "2nd Prize",
+        "team": ["Thilak Govind S S (Team Lead)", "Pranesh RD", "Shanmugan P"],
+        "team_name": "Yet Another 3",
+        "project": "RE:TIRED",
+        "description": "2D top-down action-adventure game in Godot 4 on the 'Festival of Machines' theme, about machines being retired rather than destroyed.",
+        "my_part": "Team lead: coordination, rapid development, turning the idea into a playable build.",
+        "link": "https://itch.io",
+        "link_note": "Replace with the exact RE:TIRED itch.io URL.",
+        "image": "/assets/resolve-second-place.png",
+        "status": "check"
+      },
+      {
+        "id": "flutterflow-hackathon",
+        "special": "flutter",
+        "title": "Chennai FlutterFlow Hackathon",
+        "date": "",
+        "date_note": "Confirm date.",
+        "location": "Chennai",
+        "organiser": "",
+        "result": "3rd Place",
+        "team": [],
+        "project": "AI Family-Care Agent",
+        "description": "Voice-first AI family-care agent that understands care requests, coordinates family members, and requests transport through an API-connected workflow. Prototype showed pending vs. confirmed arrangements. Full Flutter build was not finished due to time and token limits.",
+        "link": "",
+        "image": "/assets/flutterflow-third-place.png",
+        "event_image": "/assets/flutterflow-event-group.png",
+        "status": "check"
+      },
+      {
+        "id": "sustain-agentic-bootcamp",
+        "title": "Sustain Agentic Bootcamp, SRMIST (Problem #19)",
+        "date": "2026-09-29 to 2026-09-30",
+        "location": "SRM Institute of Science and Technology",
+        "organiser": "",
+        "result": "Working prototype, no prize",
+        "team": ["Thilak Govind S S", "Josiah Arun", "Aarya Jain", "Crystal Darling", "Kushal Jain"],
+        "team_name": "Yet Another 2",
+        "project": "Document Verification Agent",
+        "description": "Agent that matches a family's application profile to a rules list, finds missing pages across phones, and writes a short cover letter. Local Qwen 2.5 via Ollama, Python, Streamlit, pypdf, ReportLab.",
+        "results_detail": "5/5 test scenarios correct, 3/3 exact requests, 0 false requests, packet built in under a second.",
+        "link": "",
+        "image": "/assets/cert-sustain.png",
+        "status": "check"
+      },
+      {
+        "id": "hackfest-2026",
+        "title": "HACKFEST 2026",
+        "date": "",
+        "date_note": "Confirm date (about 1 month before post).",
+        "location": "SRM Institute of Science and Technology",
+        "organiser": "ECE Association",
+        "project": "Bathtaker",
+        "description": "IoT washroom management and monitoring system: ESP32 sensors, C++ firmware, ESP-NOW, FastAPI backend, SQLite, React dashboard, local AI via Ollama and Qwen 2.5, Docker, deployed on Render.",
+        "link": "",
+        "image": "/assets/hackfest-certificates.png",
+        "status": "check"
+      },
+      {
+        "id": "qwikdev-start-3",
+        "title": "QwikDev Start 3.0",
+        "date": "2026-10-13",
+        "location": "SRM Institute of Science and Technology, Kattankulathur",
+        "organiser": "QwikLabs Developers Club, with Astraalis AI",
+        "result": "Participant",
+        "project": "AI Meme Generator",
+        "description": "40-minute challenge building a meme generator web app with Pollinations.ai API for AI-generated meme images.",
+        "link": "https://lnkd.in/gU3Mr2Dg",
+        "image": "/assets/qwikdev-selfie.png",
+        "status": "ok"
+      }
+    ],
+
+    "events": [
+      {
+        "id": "cdc50-confluence-2026",
+        "title": "CDC50 — Confluence",
+        "date": "2026-11-14",
+        "location": "Ford GTBC, Chennai",
+        "organiser": "Chennai Data Circle, Codebasics and Ford Motor Company",
+        "description": "Attended CDC50 — Confluence at Ford GTBC, Chennai. Sessions explored fundamentals versus AI-first thinking, moving from reports to decisions, the Pain–Place–Position framework for product work, and sparse, semantic and graph-based retrieval in RAG. Interactive activities and networking brought new perspectives on building useful AI products.",
+        "image": "/assets/cdc50-event.png",
+        "status": "ok"
+      },
+      {
+        "id": "agent-lab-2026",
+        "title": "Agent Lab 2026: Build with AI, Not Just About AI",
+        "date": "",
+        "date_note": "Attended about 1 week before post. Confirm date.",
+        "location": "Contus, Chennai",
+        "organiser": "Madrasters x Google AI Studio",
+        "description": "Hands-on AI agent workshop: agents vs. LLMs, prompt engineering (R-C-T-C-O-G-E), Google AI Studio, agent architecture, testing and reliability. Built InterviewBuddy, an AI interview evaluator.",
+        "link": "",
+        "image": "/assets/madrasters-agent-lab.png",
+        "status": "check"
+      },
+      {
+        "id": "hacktoberfest-2026-workday",
+        "title": "Hacktoberfest 2026 at Workday",
+        "date": "2026-10",
+        "location": "Workday, Chennai",
+        "organiser": "Workday, OS Community, Major League Hacking, Sapiens Campus",
+        "description": "Open-source AI, documentation tooling, AI agents (OpenClaw vs. Hermes), developer tools, and shaders.",
+        "link": "",
+        "image": "/assets/workday-event.png",
+        "status": "check"
+      },
+      {
+        "id": "elastic-community-rag",
+        "title": "Elastic Community Chennai: RAG and Agentic Workflows",
+        "date": "2026-10-10",
+        "location": "Ideas2IT Technology, Guindy, Chennai",
+        "organiser": "Elastic Community Chennai",
+        "description": "Elasticsearch, keyword vs. semantic search, RAG, agentic AI with tools, transformer basics.",
+        "link": "",
+        "image": "/assets/elastic-community-event.png",
+        "status": "check"
+      },
+      {
+        "id": "aakash-lab-embedded",
+        "title": "Electronics & Embedded Systems Program for Government School Students",
+        "date": "",
+        "date_note": "About 3 months before post. Confirm date.",
+        "location": "SRM KTR, Kattankulathur",
+        "organiser": "Aakash Research Lab (ARL) Club, SRM KTR",
+        "description": "Volunteered alongside seniors and ECE classmates, teaching fundamentals of electronics and embedded systems to students from Singaperumal Kovil.",
+        "link": "",
+        "image": "",
+        "status": "check"
+      },
+      {
+        "id": "be10x-claude-workshop",
+        "title": "AI Tools & Claude Workshop",
+        "date": "2026-09-06",
+        "organiser": "be10X",
+        "description": "Practical AI workflows for productivity, data analysis, coding and resume work.",
+        "link": "",
+        "image": "",
+        "status": "check"
+      },
+      {
+        "id": "vaultofcodes-ethical-hacking",
+        "title": "Ethical Hacking & Cybersecurity Workshop",
+        "date": "2026-09",
+        "organiser": "VaultofCodes",
+        "description": "Ethical hacking and cybersecurity workshop with quiz and achievement certificate.",
+        "link": "https://xnigwq.on-app.in/app/oc/822097/xnigwq",
+        "image": "",
+        "status": "ok"
+      }
+    ],
+
+    "projects": [
+      {
+        "id": "neerwatch",
+        "title": "NeerWatch",
+        "date": "",
+        "description": "Water-quality and waterborne-disease monitoring prototype for Northeast India. It maps 44 historical monitoring locations across eight states and lets field teams record verification results. XGBoost and SHAP are part of the pitch and supplied artifacts; the current backend marks live risk predictions and explanations as unavailable until connected.",
+        "stack": ["Node.js", "Leaflet", "JavaScript", "HTML and CSS", "Historical water data"],
+        "github": "https://github.com/palanisamyshanmugan-ship-it/NeerWatch",
+        "link": "https://github.com/palanisamyshanmugan-ship-it/NeerWatch",
+        "deck": "/assets/NeerWatch_Presentation_v2.pptx",
+        "notes_image": "/assets/neerwatch-notes.png",
+        "image": "/assets/geniexhub-project-eclipse.png",
+        "poster_style": "contain",
+        "status": "ok"
+      },
+      {
+        "id": "interviewbuddy",
+        "title": "InterviewBuddy",
+        "date": "",
+        "description": "AI interview evaluator. Takes a job role, question and answer, then gives a score, strengths, areas to improve and follow-up questions, with grounded feedback.",
+        "stack": ["Python", "LLMs", "AI agents", "Prompt engineering"],
+        "link": "",
+        "image": "/assets/madrasters-agent-lab.png",
+        "status": "check"
+      },
+      {
+        "id": "bathtaker",
+        "title": "Bathtaker",
+        "date": "",
+        "description": "IoT washroom monitoring system with live dashboard and local AI assistant.",
+        "stack": ["ESP32", "C++", "ESP-NOW", "Python", "FastAPI", "SQLite", "React", "Vite", "Tailwind CSS", "WebSockets", "Ollama", "Qwen 2.5", "Docker", "Render"],
+        "link": "",
+        "image": "/assets/hackfest-certificates.png",
+        "status": "check"
+      },
+      {
+        "id": "veeramangai",
+        "title": "Veeramangai",
+        "date": "2026",
+        "description": "Support platform for women athletes in Tamil Nadu: athlete profiles, sports trial discovery, support requests for entry fees and equipment, coach communication, and Tamil and English AI assistance (Avvai). Built at a REACH and IEEE SRM event on SDG 5 (Gender Equality).",
+        "stack": ["Supabase", "FastAPI", "n8n", "Sarvam Tamil voice", "AI"],
+        "link": "",
+        "image": "/assets/avvai-sdg5-prototype.png",
+        "status": "check"
+      },
+      {
+        "id": "studyspot-srm",
+        "title": "StudySpot SRM",
+        "date": "",
+        "description": "Study-space and seat reservation platform for SRMIST campus. Seat availability, individual and group bookings, real-time updates, credit-based reservations.",
+        "stack": ["React", "Vite", "Firebase Authentication", "Firestore"],
+        "link": "",
+        "image": "/assets/ece-buildings.png",
+        "status": "check"
+      },
+      {
+        "id": "retired-game",
+        "title": "RE:TIRED",
+        "date": "2026-08-31",
+        "description": "2D Godot 4 action-adventure game. See RESOLVE '26 entry in hackathons.",
+        "link": "https://itch.io",
+        "link_note": "Replace with exact itch.io URL.",
+        "image": "/assets/resolve-second-place.png",
+        "status": "check"
+      },
+      {
+        "id": "projectmatch",
+        "title": "ProjectMatch",
+        "date": "",
+        "description": "Team-formation platform for students: skill-based profiles, project creation, skill-based team matching, outcomes and organiser dashboard.",
+        "stack": ["Web", "Vercel", "GitHub"],
+        "link": "https://lnkd.in/gwi6-ifH",
+        "github": "https://lnkd.in/g26ayyzJ",
+        "image": "",
+        "status": "ok"
+      },
+      {
+        "id": "personal-admin-os",
+        "title": "Personal Admin OS for Kirana Stores",
+        "date": "2026-10",
+        "description": "See HackSprint 2026 entry in hackathons.",
+        "link": "https://lnkd.in/gb_Jn9HW",
+        "image": "/assets/hacksprint-bengaluru.png",
+        "status": "ok"
+      },
+      {
+        "id": "solar-panel-research",
+        "title": "Solar Panel Research (UROP)",
+        "date": "2026",
+        "description": "Undergraduate research paper on solar panels, covering documentation and analytical work.",
+        "link": "",
+        "image": "/assets/solar-panel-research.png",
+        "status": "check"
+      }
+    ],
+
+    "roles": [
+      {
+        "id": "corporate-crew-fast",
+        "title": "Corporate Crew",
+        "organisation": "FAST",
+        "type": "Full-time",
+        "date": "2026-11 to present",
+        "location": "Chennai, Hybrid",
+        "description": "Corporate communications and community outreach.",
+        "image": "/assets/organizations/fast.png",
+        "status": "ok"
+      },
+      {
+        "id": "marketing-team-lead-ai-geeks",
+        "title": "Marketing Team Lead",
+        "organisation": "AI Geeks Chennai",
+        "type": "Full-time",
+        "date": "2026-09 to present",
+        "location": "Greater Chennai, Hybrid",
+        "description": "Management, event planning and community engagement. Core team member at AI Geeks Chennai.",
+        "image": "/assets/organizations/ai-geeks-logo.png",
+        "status": "ok"
+      },
+      {
+        "id": "junior-hr-inamigos",
+        "title": "Junior Human Resources Consultant (Internship)",
+        "organisation": "InAmigos Foundation",
+        "type": "Internship",
+        "date": "2026-09 to present",
+        "location": "India",
+        "description": "Team communication and coordination across assigned groups. Offer letter received 18 Sep 2026.",
+        "image": "/assets/organizations/junior-hr.png",
+        "status": "ok"
+      },
+      {
+        "id": "ai-ml-intern-inamigos",
+        "title": "AI and Machine Learning Intern",
+        "organisation": "InAmigos Foundation",
+        "type": "Internship",
+        "date": "2026-08 to 2026-09",
+        "location": "Chennai, Remote",
+        "description": "Practical exposure to AI, machine learning and project-based deliverables.",
+        "image": "/assets/organizations/inamigos-logo.png",
+        "status": "ok"
+      },
+      {
+        "id": "core-member-team-srm-hackathon",
+        "title": "Core Member",
+        "organisation": "Team SRM Hackathon",
+        "type": "Part-time",
+        "date": "2026-08 to present",
+        "location": "Chengalpattu, Hybrid",
+        "description": "Public speaking and hackathon team activities.",
+        "image": "",
+        "badge_image": "/assets/organizations/srm-hackathon-club.png",
+        "status": "ok"
+      },
+      {
+        "id": "campus-ambassador-eplane",
+        "title": "Campus Ambassador",
+        "organisation": "ePlane (IIT Madras startup)",
+        "type": "",
+        "date": "2026",
+        "location": "",
+        "description": "Selected for the campus ambassador programme.",
+        "image": "/assets/organizations/eplane.png",
+        "status": "check"
+      },
+      {
+        "id": "aakash-research-lab",
+        "title": "Research Member and Volunteer",
+        "organisation": "Aakash Research Lab, SRM KTR",
+        "type": "",
+        "date": "",
+        "location": "SRM KTR",
+        "description": "Research-oriented electronics and embedded systems activities.",
+        "image": "",
+        "status": "check"
+      },
+      {
+        "id": "ieee-student-member",
+        "title": "Student Member",
+        "organisation": "IEEE and IEEE Computer Society",
+        "type": "Membership",
+        "date": "2026-07 to 2026-12",
+        "location": "",
+        "description": "Student membership in IEEE and IEEE Computer Society.",
+        "image": "/assets/organizations/ieee.png",
+        "badge_image": "/assets/organizations/ieee-computer-society.png",
+        "status": "ok"
+      }
+    ],
+
+    "certificates": [
+      {
+        "title": "AI & Machine Learning Internship",
+        "organisation": "InAmigos Foundation",
+        "date": "2026-09-11",
+        "description": "Certificate of internship for completing the AI and machine learning internship at InAmigos Foundation from 21 August to 3 September 2026.",
+        "link": "",
+        "image": "/assets/cert-inamigos-actual.png",
+        "status": "ok"
+      },
+      {
+        "title": "AI Tools & Claude Workshop",
+        "organisation": "be10X",
+        "date": "2026-09-06",
+        "description": "Workshop on practical AI tools and Claude for productivity, data analysis, coding and resume work.",
+        "link": "",
+        "image": "/assets/cert-be10x-actual.png",
+        "status": "ok"
+      },
+      {
+        "title": "Python Programming Course | From Basics to Real-World Skills",
+        "organisation": "Udemy",
+        "date": "2026-04-19",
+        "description": "Completed a 34-hour Python programming course from basics to real-world skills.",
+        "link": "",
+        "image": "/assets/cert-udemy-actual.png",
+        "status": "ok"
+      },
+      {
+        "title": "JavaScript Bootcamp",
+        "organisation": "LetsUpgrade",
+        "date": "2026-10-06",
+        "description": "Completed the JavaScript Bootcamp, issued by LetsUpgrade on 6 October 2026.",
+        "link": "",
+        "image": "/assets/cert-javascript-actual.png",
+        "status": "ok"
+      },
+      {
+        "title": "DSA Bootcamp with C++",
+        "organisation": "LetsUpgrade",
+        "date": "2026-10-14",
+        "description": "Completed the DSA with C++ Bootcamp, issued 14 October 2026.",
+        "link": "",
+        "image": "/assets/cert-dsa-actual.jpeg",
+        "status": "ok"
+      },
+      {
+        "title": "Ethical Hacking & Cybersecurity Workshop",
+        "organisation": "VaultofCodes",
+        "date": "2026-09",
+        "description": "Completed a two-hour workshop and scored 95 out of 100 on its cybersecurity assessment.",
+        "link": "https://xnigwq.on-app.in/app/oc/822097/xnigwq",
+        "image": "/assets/cert-ethical-hacking-actual.jpeg",
+        "status": "ok"
+      },
+      {
+        "title": "Next-Generation Hybrid Electric Drives: Future Research Directions in Sustainable Mobility",
+        "organisation": "SRM Institute of Science and Technology",
+        "date": "2026-07-06 to 2026-07-07",
+        "description": "Participated in the international workshop on hybrid electric drives and sustainable mobility at SRMIST, held 6–7 July 2026.",
+        "link": "",
+        "image": "/assets/cert-hybrid-drives-actual.png",
+        "status": "ok"
+      },
+      {
+        "title": "Sustain Agentic Bootcamp — Participation",
+        "organisation": "SRM Institute of Science and Technology",
+        "date": "2026-09-29 to 2026-09-30",
+        "description": "Participated in Sustain Agentic Bootcamp on designing and building sustainable, intelligent AI agentic systems.",
+        "link": "",
+        "image": "/assets/cert-sustain.png",
+        "document": "/assets/Sustain_Agentic_Bootcamp_Certificate.pdf",
+        "status": "ok"
+      },
+      {
+        "title": "QwikDevStart 3.0 — Participation",
+        "organisation": "QwikLabs Developers Club",
+        "date": "2026-10-13",
+        "description": "Participated in QwikDevStart 3.0 at SRMIST Kattankulathur on 13 October 2026.",
+        "link": "",
+        "image": "/assets/cert-qwikdev.jpeg",
+        "status": "ok"
+      },
+      {
+        "title": "HackSprint 2026 — Participation",
+        "organisation": "Commudle and MAHE",
+        "date": "2026-10-17 to 2026-10-18",
+        "description": "Participated with Quantum Forge in the 24-hour HackSprint hackathon at MAHE, 17–18 October 2026.",
+        "link": "",
+        "image": "/assets/cert-hacksprint.jpeg",
+        "status": "ok"
+      },
+      {
+        "title": "MY Bharat Registration Recognition",
+        "organisation": "Ministry of Youth Affairs and Sports",
+        "date": "",
+        "description": "Recognition for successfully registering on the MY Bharat platform. This records registration, not a completed service programme.",
+        "link": "",
+        "image": "/assets/cert-my-bharat.png",
+        "status": "ok"
+      }
+    ]
+  },
+
+  "about": {
+    "heading": "A little about me",
+    "text": "CGPA 8.63 in ECE (Data Science) at SRM, Chennai. Top 12 finalist at HackSprint 2026 with Quantum Forge. Marketing Team Lead at AI Geeks Chennai. Builds AI agents, IoT systems and playable games.",
+    "image": "",
+    "status": "ok"
+  },
+
+  "process": [
+    { "step": "01", "title": "Talk", "text": "Start with the problem and the people it affects." },
+    { "step": "02", "title": "Sketch", "text": "Shape the idea fast, often inside a hackathon clock." },
+    { "step": "03", "title": "Build and ship", "text": "Prototype, test with real edge cases, then keep improving." }
+  ],
+
+  "toolkit": ["Python", "FastAPI", "React", "SQL", "Godot 4", "Ollama", "Docker", "Streamlit", "C++", "Supabase", "Firebase", "n8n", "Git", "GitHub"]
+}

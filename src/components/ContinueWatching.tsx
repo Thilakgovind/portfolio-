@@ -5,10 +5,16 @@ import { useWatchProgress } from '../hooks/sectionProgress';
 import { useSmoothScroll } from '../hooks/smoothScroll';
 import { useFinePointer } from '../hooks/useMedia';
 import { EASE, RevealText } from './fx';
-import { PosterBackdrop } from './Poster';
 import { RailButtons } from './Rail';
 
-const GLYPHS: Record<SectionId, string> = { about: 'S', journey: 'S01', originals: '3', picks: '10', skills: '{ }', moments: '★', story: 'CV' };
+const ART: Record<SectionId, string> = {
+  journey: '/assets/episode-journey.png',
+  picks: '/assets/episode-picks.png',
+  skills: '/assets/episode-skills.png',
+  moments: '/assets/episode-achievements.png',
+  about: '/assets/episode-about.png',
+  story: '/assets/episode-story.png',
+};
 
 export default function ContinueWatching({ order }: { order: SectionId[] }) {
   const progress = useWatchProgress();
@@ -46,18 +52,17 @@ export default function ContinueWatching({ order }: { order: SectionId[] }) {
                 animate={{ x: shift, scale: fine && hovered === i ? 1.08 : 1, zIndex: hovered === i ? 10 : 1 }}
                 transition={{ duration: 0.5, ease: EASE, delay: 0 }}
               >
-                <div className="relative h-full w-full overflow-hidden rounded-lg ring-1 ring-white/10 transition duration-500 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,61,90,0.6)]">
-                  <motion.div className="absolute inset-0" animate={{ scale: hovered === i ? 1.12 : 1 }} transition={{ duration: 0.8, ease: EASE }}>
-                    <PosterBackdrop palette={meta.palette}>
-                      <span className="absolute -right-2 -top-6 font-display text-[8rem] leading-none text-white/[0.07] sm:text-[9rem]">{GLYPHS[id]}</span>
-                    </PosterBackdrop>
-                  </motion.div>
-                  <div className="absolute inset-0 flex flex-col justify-end p-4">
+                <div className="relative h-full w-full overflow-hidden rounded-lg bg-black ring-1 ring-white/10 transition duration-500 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,61,90,0.6)]">
+                  <div className="absolute inset-x-0 top-0 h-[64%] overflow-hidden bg-[#171719]">
+                    <motion.img src={ART[id]} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40 blur-lg" animate={{ scale: hovered === i ? 1.12 : 1 }} transition={{ duration: 0.8, ease: EASE }} />
+                    <motion.img src={ART[id]} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-contain" animate={{ scale: hovered === i ? 1.06 : 1 }} transition={{ duration: 0.8, ease: EASE }} />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 flex h-[36%] flex-col justify-center bg-[#09090c] px-4 py-2">
                     <span className="mb-1 text-[10px] font-bold uppercase tracking-[0.3em] text-crimson-2">Episode {String(i + 1).padStart(2, '0')}</span>
-                    <span className="font-display text-2xl leading-none tracking-wide text-bone transition-transform duration-500 group-hover:-translate-y-1 sm:text-3xl">
+                    <span className="font-display text-xl leading-none tracking-wide text-bone sm:text-2xl">
                       {meta.card}
                     </span>
-                    <span className="mt-1 text-xs text-mist opacity-100 transition duration-500 lg:translate-y-2 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                    <span className="mt-1 hidden text-xs text-mist sm:block">
                       {meta.meta}
                     </span>
                   </div>

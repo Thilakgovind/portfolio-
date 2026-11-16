@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+<rect width="600" height="300" rx="18" fill="#0d0d10"/>
+<rect x="6" y="6" width="588" height="288" rx="14" fill="#16161b" stroke="#2c2c33" stroke-width="2"/>
+<g transform="translate(240,50) scale(5)" fill="none" stroke="#f4f1ec" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</g>
+<text x="300" y="220" font-size="24" font-weight="700" fill="#f2f2f4" text-anchor="middle" font-family="Arial, sans-serif">Research Paper Preparation</text>
+<text x="300" y="250" font-size="14" fill="#8a8a94" text-anchor="middle" font-family="Arial, sans-serif">Research Methods</text>
+</svg>

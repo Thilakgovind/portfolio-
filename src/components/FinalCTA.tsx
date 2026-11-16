@@ -4,6 +4,7 @@ import { profile } from '../data/portfolio';
 import { useSmoothScroll } from '../hooks/smoothScroll';
 import { EASE, Magnetic, Particles } from './fx';
 import { SeriesMark } from './Poster';
+import { ThilluSprite } from './Thillu';
 
 export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
   const ref = useRef<HTMLElement>(null);
@@ -17,6 +18,9 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
     { label: "Let's Build", href: `mailto:${profile.email}?subject=${encodeURIComponent("Let's build something")}`, primary: true, cursor: 'play' },
     { label: 'LinkedIn', href: profile.links.linkedin, cursor: 'link' },
     { label: 'GitHub', href: profile.links.github, cursor: 'link' },
+    { label: 'Portfolio Repo', href: profile.links.portfolio, cursor: 'link' },
+    { label: 'Instagram', href: profile.links.instagram, cursor: 'link' },
+    { label: 'X', href: profile.links.x, cursor: 'link' },
     { label: 'Email', href: `mailto:${profile.email}`, cursor: 'link' },
   ];
 
@@ -89,6 +93,7 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
       </div>
 
       <footer className="absolute inset-x-0 bottom-0 px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] text-center">
+        <ThilluSprite pose="stand" className="mx-auto mb-2 h-14 w-10" />
         <div className="mb-2 text-base">
           <SeriesMark />
         </div>
